@@ -1,0 +1,12 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
+    box-sizing: border-box;
+    background-color: black;
+    color: antiquewhite;
+}
+
+h1{
+    font-family: 'Ubuntu', sans-serif;
+}
