@@ -3,10 +3,131 @@
     padding: 0px;
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
-    background-color: black;
-    color: antiquewhite;
+    background-color: rgba(0, 0, 0, 0);
+    color: whitesmoke;
 }
 
-h1{
-    font-family: 'Ubuntu', sans-serif;
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Top bar related things */
+
+.wrapper{
+    overflow: hidden;
+
+    width: 100%;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    background-color: black;
+}
+
+.nav-Area{
+    float: right;
+    margin-top: 30px;
+}
+.nav-Area li{
+    display: inline-block;
+}
+.nav-Area li a{
+    color: blue;
+    padding: 5px 20px;
+    font-size: 1.6rem;
+    border-width: 0 0 0 0.1rem;
+    border-style: solid;
+    border-color: rgb(79, 79, 255);
+}
+.nav-Area li a:hover{
+    color: rgb(34, 34, 212);
+    transition: all ease 0.2s;
+}
+
+.nav-Area li a:active{
+    color: rgb(79, 79, 255);
+    transition: all ease 0.2s;
+}
+
+.logo img{
+    width: 100px;
+    float: left;
+    height: auto;
+}
+
+.page-Heading{
+    margin-top: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.page-Heading h1{
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+/* Star Background */
+
+.backGround{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.backGround img{
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+}
+
+/* Back to top functionality */
+
+.to-Top{
+    background: whitesmoke;
+    position: fixed;
+    bottom: 16px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px black solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    text-decoration: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .4s;
+}
+
+.to-Top div{
+    color: black;
+}
+
+.to-Top.active {
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
 }

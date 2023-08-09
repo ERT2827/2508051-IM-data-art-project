@@ -1,0 +1,74 @@
+.splashtext{
+    margin: 50vh 10vw;
+    text-align: center;
+    font-size: 3rem;
+    background-color: darkblue;
+    border-radius: 12px;
+    padding: 0.3rem 0;
+    /* border-radius: 4px;
+    border: 2px solid black;
+    width: 80vw; */
+}
+
+.readingSection{
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    margin: 15vh 10vw;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.readingSection h2{
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.readingSection h3{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.readingSection p{
+    padding: 1rem 1.5rem;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.readingSection li{
+    list-style: inside;
+    color: black;
+    padding: 0 2rem;
+    font-size: 1.1rem;
+}
+
+.APIDemo{
+    padding: 0 10vw 1rem;
+}
+
+.APIDemo h3{
+    padding-top: 2rem;
+    font-size: 1.6rem;
+}
+
+.APIDemo img{
+    width: 80vw;
+    height: auto;
+    padding-bottom: 1rem;
+}
+
+
+
+@media(max-width:650px){
+    /* .splashtext{
+        width: 95vw;
+    } */
+}
