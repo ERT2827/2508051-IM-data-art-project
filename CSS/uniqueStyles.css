@@ -65,7 +65,40 @@
     padding-bottom: 1rem;
 }
 
+/* blog post stuff */
 
+.blogPost {
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    margin: 15vh 10vw;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0;
+}
+
+.blogPost h2{
+    font-size: 3rem;
+    padding: 1rem 2rem;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.blogPost h3{
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    background-color: whitesmoke;
+    color: black;
+}
+
+.blogPost p{
+    padding: 1rem 1.5rem;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.1rem;
+}
 
 @media(max-width:650px){
     /* .splashtext{
