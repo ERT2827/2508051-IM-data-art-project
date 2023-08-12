@@ -1,22 +1,22 @@
 var pages = [{
     ID: 1,
-    location: "../HTML/index.html",
+    location: "index.html",
     text: "Home"
 },{
     ID: 2,
-    location: "../HTML/learning.html",
+    location: "learning.html",
     text: "Learning"
 },{
     ID: 3,
-    location: "../HTML/art.html",
+    location: "art.html",
     text: "Art"
 },{
     ID: 4,
-    location: "../HTML/design.html",
+    location: "design.html",
     text: "Design"
 },{
     ID: 5,
-    location: "../HTML/blog.html",
+    location: "blog.html",
     text: "Blog"
 },]
 
@@ -24,7 +24,7 @@ var pages = [{
 
 const topBarArea = document.querySelector(".nav-Area");
 
-displayTopBar(pages);
+    displayTopBar(pages);
 
 function displayTopBar(pageses){
     var displayTopBar = pageses.map(function (pageses){
@@ -32,6 +32,22 @@ function displayTopBar(pageses){
       }).join(" ");
 
     topBarArea.innerHTML = displayTopBar;
+}
+
+//Sidebar
+
+const sideBarArea = document.getElementById("sideChick");
+
+if(sideBarArea != null){
+    displaysideBar(pageLinks);
+}
+
+function displaysideBar(pageses) {
+    var displaysideBar = pageses.map(function (pageses){
+        return `<li><a href="${pageses.location}">${pageses.text}</a></li>`;
+      }).join(" ");
+
+      sideBarArea.innerHTML = displaysideBar;
 }
 
 //to top

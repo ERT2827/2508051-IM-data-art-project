@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/uniqueStyles.css">
+    <link rel="stylesheet" href="CSS/gallery.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,12 @@
         <img src="multimedia/star-galaxy.gif" alt="A glittering sky of stars">
     </span> 
 
+    <!-- This is used for the gallery -->
+    <div class="full-Image" id="fullIMGBox">
+        <img src="images/Festive.jpg" alt="" id="fullIMG">
+        <span onclick="CloseFull()">X</span>
+    </div>
+
     <!-- content -->
 
     <section class="readingSection">
@@ -54,6 +61,11 @@
         </ul>
     </section>
 
+    <section>
+        <h3 class="heading">GALLERY: </h3>
+        <section class="image-Gallery"></section>
+    </section>
+
     <a href="#" class="to-Top">
         <div>↑</div>
     </a>
@@ -61,5 +73,6 @@
 
     <!-- Scripts -->
     <script src="Java/navigationTools.js"></script>
+    <script src="Java/gallery.js"></script>
 </body>
 </html>
