@@ -133,3 +133,122 @@ body{
     pointer-events: auto;
     opacity: 1;
 }
+
+/* Hamburger Menu */
+
+:root{
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --hamburger-Gap: 6px;
+    --hamburger-margin: 8px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-Gap) * 2);
+}
+
+.HamMenu{
+    --x-width: calc(var(--hamburger-height) * 1,414);
+    
+    display: flex;
+    flex-direction: column;
+    gap: var(--hamburger-Gap);
+
+    width: max-content;
+    position: absolute;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 6;
+    cursor: pointer;
+
+    position: fixed;
+
+    visibility: hidden;
+}
+
+.HamMenu::before,
+.HamMenu::after,
+.HamMenu input{
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: whitesmoke;
+    border: 1px solid black;
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+}
+
+.HamMenu input{
+    appearance: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+
+.HamMenu:has(input:checked)::before {
+    rotate: 45deg;
+    width: 11;
+    translate: 0 4;
+    background-color: black;
+}
+
+.HamMenu:has(input:checked)::after {
+    rotate: -45deg;
+    width: 11;
+    translate: 0 4;
+    background-color: black;
+}
+
+.HamMenu input:checked{
+    opacity: 0;
+    width: 0;
+}
+
+.sideBar {
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1.5rem);
+    background-color: whitesmoke;
+    color: darkslategray;
+    max-width: 15rem;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.HamMenu:has(input:checked) + .sideBar{
+    translate: 0;
+}
+
+.sideBar li{
+    display: inline-flex;
+    flex-direction: column;
+}
+.sideBar li a{
+    color: blue;
+    padding: 5px 20px;
+    font-size: 1.2rem;
+}
+.sideBar li a:hover{
+    color: rgb(34, 34, 212);
+    transition: all ease 0.2s;
+}
+
+@media only screen and (max-width: 830px){
+    .wrapper{
+        visibility: hidden;
+    }
+
+    .HamMenu{
+        visibility: visible;
+    }
+}

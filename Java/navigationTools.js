@@ -39,7 +39,7 @@ function displayTopBar(pageses){
 const sideBarArea = document.getElementById("sideChick");
 
 if(sideBarArea != null){
-    displaysideBar(pageLinks);
+    displaysideBar(pages);
 }
 
 function displaysideBar(pageses) {

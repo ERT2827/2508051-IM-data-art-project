@@ -1,5 +1,5 @@
 .splashtext{
-    margin: 50vh 10vw;
+    margin: 45vh 10vw;
     text-align: center;
     font-size: 3rem;
     background-color: darkblue;
@@ -61,7 +61,21 @@
     align-items: center;
 }
 
-.APIDemo{
+.readingSection figure img{
+    width: 99%;
+    height: auto;
+    align-self: center;
+}
+
+figcaption {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: whitesmoke;
+    /* padding: 3px; */
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .APIDemo{
     padding: 0 10vw 1rem;
 }
 
@@ -124,11 +138,13 @@
     padding-bottom: 1rem;
 }
 
-.references p{
+.references cite{
     padding: 1rem 1.5rem;
     background-color: whitesmoke;
     color: black;
     font-size: 1.1rem;
+    width: 98%;
+    word-wrap: break-word;
 }
 
 .references h2{
@@ -153,6 +169,45 @@
 .references a:active{
     color: rgb(79, 79, 255);
     transition: all ease 0.2s;
+}
+
+@media only screen and (max-width: 830px){
+    .splashtext{
+        margin: 35vh 5vw;
+    }
+
+    .readingSection h2{
+        padding: 0 0.4rem;
+        margin-top: 1rem;
+        background-color: transparent;
+    }
+
+    .readingSection h3{
+        padding: 0 0.4rem;
+        margin-top: 2rem;
+    }
+
+
+    .readingSection figure{
+        align-self: center;
+        width: 98%
+    }
+
+    .blogPost h2{
+        padding: 0 0.4rem;
+        margin-top: 1rem;
+        width: 98%;
+        word-wrap: break-word;
+    }
+
+    .references h2{
+        padding: 0 0.4rem;
+        margin-top: 1rem;
+    }
+    
+    .references a{
+        background-color: rgba(0, 0, 0, 0);
+    }
 }
 
 @media(max-width:650px){

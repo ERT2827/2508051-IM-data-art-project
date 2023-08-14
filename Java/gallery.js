@@ -6,8 +6,38 @@ var designIMG = [{
 },{
     id: 2,
     img: "multimedia/star-galaxy.gif",
-    desc: "A silly lil gif",
+    desc: "The gif I use for my background",
     alt: "A gif of sparkling stars"
+},{
+    id: 3,
+    img: "multimedia/Text Sample.png",
+    desc: "A text sample",
+    alt: "A sample image of my font style"
+},{
+    id: 4,
+    img: "multimedia/colorScheme.jpg",
+    desc: "A color palette",
+    alt: "My current basic color pallete."
+},{
+    id: 5,
+    img: "multimedia/Basic ideas.jpg",
+    desc: "My basic wireframes",
+    alt: "These are my first, basic wireframes."
+},{
+    id: 6,
+    img: "multimedia/Knaflic.png",
+    desc: "An excerpt from Knaflic",
+    alt: "An excerpt from Knaflic, showing the kind of information that they offer."
+},{
+    id: 7,
+    img: "multimedia/updatedIdeas.jpg",
+    desc: "My updated rough wireframes",
+    alt: "An update to my basic wireframes to reflect the current site. I would normally do more, but that's not currently possible with my injury."
+},{
+    id: 8,
+    img: "multimedia/Art2.jpg",
+    desc: "Stars being blotted out by red",
+    alt: "A poor 2D representation of what I ultimately want to make in 3d for my final art piece."
 },]
 
 
