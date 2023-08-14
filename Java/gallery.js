@@ -3,41 +3,42 @@ var designIMG = [{
     img: "multimedia/Logo.png",
     desc: "The NASA logo",
     alt: "The NASA logo"
+    
 },{
     id: 2,
     img: "multimedia/star-galaxy.gif",
-    desc: "The gif I use for my background",
-    alt: "A gif of sparkling stars"
+    desc: "A gif of sparkling stars",
+    alt: "The gif I use for my background"
 },{
     id: 3,
     img: "multimedia/Text Sample.png",
-    desc: "A text sample",
-    alt: "A sample image of my font style"
+    desc: "A sample image of my font style",
+    alt: "A text sample",
 },{
     id: 4,
     img: "multimedia/colorScheme.jpg",
-    desc: "A color palette",
-    alt: "My current basic color pallete."
+    desc: "My current basic color pallete.",
+    alt: "A color palette",
 },{
     id: 5,
     img: "multimedia/Basic ideas.jpg",
-    desc: "My basic wireframes",
-    alt: "These are my first, basic wireframes."
+    desc: "These are my first, basic wireframes.",
+    alt: "My basic wireframes",
 },{
     id: 6,
     img: "multimedia/Knaflic.png",
-    desc: "An excerpt from Knaflic",
-    alt: "An excerpt from Knaflic, showing the kind of information that they offer."
+    desc: "An excerpt from Knaflic, showing the kind of information that they offer.",
+    alt: "An excerpt from Knaflic",
 },{
     id: 7,
     img: "multimedia/updatedIdeas.jpg",
-    desc: "My updated rough wireframes",
-    alt: "An update to my basic wireframes to reflect the current site. I would normally do more, but that's not currently possible with my injury."
+    desc: "An update to my basic wireframes to reflect the current site. I would normally do more, but that's not currently possible with my injury.",
+    alt: "My updated rough wireframes",
 },{
     id: 8,
     img: "multimedia/Art2.jpg",
-    desc: "Stars being blotted out by red",
-    alt: "A poor 2D representation of what I ultimately want to make in 3d for my final art piece."
+    desc: "A poor 2D representation of what I ultimately want to make in 3d for my final art piece.",
+    alt: "Stars being blotted out by red",
 },]
 
 
