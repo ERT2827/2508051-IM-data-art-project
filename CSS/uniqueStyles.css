@@ -10,6 +10,11 @@
     width: 80vw; */
 }
 
+.highlightedText{
+    color: red;
+    font-style: bold;
+}
+
 .readingSection{
     background-color: whitesmoke;
     color: black;
@@ -48,6 +53,12 @@
     color: black;
     padding: 0 2rem;
     font-size: 1.1rem;
+}
+
+.readingSection img{
+    width: 60vw;
+    height: auto;
+    align-items: center;
 }
 
 .APIDemo{
@@ -98,6 +109,50 @@
     background-color: whitesmoke;
     color: black;
     font-size: 1.1rem;
+}
+
+/* reference section */
+.references {
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    margin: 15vh 10vw;
+    border-radius: 15px;
+    justify-content:left;
+    align-items:baseline;
+    flex-direction: column;
+    padding-bottom: 1rem;
+}
+
+.references p{
+    padding: 1rem 1.5rem;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.1rem;
+}
+
+.references h2{
+    padding: 1rem .5rem;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 3rem;
+}
+
+.references a{
+    padding: 1rem 1.5rem;
+    background-color: whitesmoke;
+    color: blue;
+    font-size: 1.1rem;
+}
+
+.references a:hover{
+    color: rgb(34, 34, 212);
+    transition: all ease 0.2s;
+}
+
+.references a:active{
+    color: rgb(79, 79, 255);
+    transition: all ease 0.2s;
 }
 
 @media(max-width:650px){
