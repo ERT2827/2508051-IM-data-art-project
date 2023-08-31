@@ -22,7 +22,7 @@ var pages = [{
 
 //top bar
 
-const topBarArea = document.querySelector(".nav-Area");
+var topBarArea = document.querySelector(".nav-Area");
 
     displayTopBar(pages);
 
@@ -36,7 +36,7 @@ function displayTopBar(pageses){
 
 //Sidebar
 
-const sideBarArea = document.getElementById("sideChick");
+var sideBarArea = document.getElementById("sideChick");
 
 if(sideBarArea != null){
     displaysideBar(pages);
@@ -52,12 +52,12 @@ function displaysideBar(pageses) {
 
 //to top
 
-const toTop = document.querySelector(".to-Top");
+var toTopper = document.querySelector(".toTop");
 
 window.addEventListener("scroll", () => {
     if(window.scrollY > 100){
-        toTop.classList.add("active");
+        toTopper.classList.add("active");
     }else{
-        toTop.classList.remove("active");
+        toTopper.classList.remove("active");
     }
 })

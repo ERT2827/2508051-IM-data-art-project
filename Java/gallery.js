@@ -58,13 +58,13 @@ function CloseFull(){
 //Gallery populator
 
 var url = window.location.pathname;
-var filename = url.substring(url.lastIndexOf('/')+1);
+var fileName = url.substring(url.lastIndexOf('/')+1);
 
 var sectionCenter = document.querySelector(".image-Gallery");
 
-if(filename == "design.html"){
+if(fileName == "design.html"){
     displayGallery(designIMG);
-}else if(filename == "portfolio.html"){
+}else if(fileName == "portfolio.html"){
     displayGallery(portfolioIMG)
 }
 
