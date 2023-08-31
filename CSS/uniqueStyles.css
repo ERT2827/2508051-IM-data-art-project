@@ -1,4 +1,4 @@
-.splashtext{
+.splashText{
     margin: 45vh 10vw;
     text-align: center;
     font-size: 3rem;
@@ -24,7 +24,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
 }
 
 .readingSection h2{
@@ -67,13 +67,17 @@
     align-self: center;
 }
 
+.readingSection a{
+    color: blue;
+}
+
 figcaption {
     background-color: rgba(0, 0, 0, 0.9);
     color: whitesmoke;
     /* padding: 3px; */
     text-align: center;
     font-size: 0.9rem;
-  }
+}
 
   .APIDemo{
     padding: 0 10vw 1rem;
@@ -172,7 +176,7 @@ figcaption {
 }
 
 @media only screen and (max-width: 830px){
-    .splashtext{
+    .splashText{
         margin: 35vh 5vw;
     }
 
@@ -211,7 +215,7 @@ figcaption {
 }
 
 @media(max-width:650px){
-    /* .splashtext{
+    /* .splashText{
         width: 95vw;
     } */
 }
