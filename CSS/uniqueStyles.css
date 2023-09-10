@@ -1,5 +1,5 @@
 .splashText{
-    margin: 45vh 10vw;
+    margin: 45vh 10vw 25vh;
     text-align: center;
     font-size: 3rem;
     background-color: darkblue;
@@ -25,6 +25,13 @@
     align-items: center;
     flex-direction: column;
     padding: 1rem 0;
+}
+
+.readingSection h1{
+    font-size: 3.2rem;
+    padding: 1rem 2rem;
+    background-color: whitesmoke;
+    color: black;
 }
 
 .readingSection h2{
@@ -103,7 +110,7 @@ figcaption {
     margin: 15vh 10vw;
     border-radius: 15px;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
     padding: 1rem 0;
 }
@@ -113,6 +120,7 @@ figcaption {
     padding: 1rem 2rem;
     background-color: whitesmoke;
     color: black;
+    align-self: center;
 }
 
 .blogPost h3{
@@ -123,10 +131,21 @@ figcaption {
 }
 
 .blogPost p{
-    padding: 1rem 1.5rem;
+    padding: 1rem 2.2rem;
     background-color: whitesmoke;
     color: black;
     font-size: 1.1rem;
+}
+
+.blogPost a{
+    color: blue;
+    font-size: 1.1rem;
+}
+
+.blogPost img{
+    align-self: center;
+    max-width: 60vw;
+    height: auto;
 }
 
 /* reference section */
@@ -175,6 +194,48 @@ figcaption {
     transition: all ease 0.2s;
 }
 
+/* Animated arrow */
+
+.arrowContainer{
+    /* position: absolute;
+    left: 50vw;
+    top: 80vw; */
+
+    height: 20vh;
+    align-items: center;
+}
+
+/* Visualization related things */
+
+.graphHolder{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes downarrow {
+    0% { -webkit-transform: translateY(0); opacity: 0.4 }
+    100% { -webkit-transform: translateY(0.4em); opacity: 0.9 }
+}
+
+.arrow {
+    border-color:transparent;
+    border-style:solid;
+    border-width:0 2em;
+    display:block;
+    height:0;
+    margin:10em auto;
+    opacity:0.4;
+    text-indent:-9999px;
+    transform-origin: 50% 50%;
+    width:0;
+}
+
+.down {
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+    border-top:2em solid whitesmoke;
+  }
+
 @media only screen and (max-width: 830px){
     .splashText{
         margin: 35vh 5vw;
@@ -212,6 +273,16 @@ figcaption {
     .references a{
         background-color: rgba(0, 0, 0, 0);
     }
+
+    /* .arrowContainer{
+        visibility: hidden;
+        display: none;
+    }
+
+    .arrow{
+        visibility: hidden;
+        display: none;
+    } */
 }
 
 @media(max-width:650px){

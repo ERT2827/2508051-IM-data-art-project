@@ -32,30 +32,32 @@ body{
     left: 0;
     z-index: 6;
     background-color: black;
+    padding: 0 6rem;
 }
 
-.nav-Area{
+.navArea{
     float: right;
     margin-top: 30px;
 }
-.nav-Area li{
+.navArea li{
     display: inline-block;
+    block-size: auto;
 }
-.nav-Area li a{
-    color: blue;
+.navArea li a{
+    color: whitesmoke;
     padding: 5px 20px;
     font-size: 1.6rem;
     border-width: 0 0 0 0.1rem;
     border-style: solid;
     border-color: rgb(79, 79, 255);
 }
-.nav-Area li a:hover{
-    color: rgb(34, 34, 212);
+.navArea li a:hover{
+    color: antiquewhite;
     transition: all ease 0.2s;
 }
 
-.nav-Area li a:active{
-    color: rgb(79, 79, 255);
+.navArea li a:active{
+    color: grey;
     transition: all ease 0.2s;
 }
 
@@ -77,6 +79,14 @@ body{
     font-size: 4rem;
     font-weight: 600;
 }
+
+.currentPage{
+    text-decoration: underline;
+    text-decoration-color: blue;
+    background-color: whitesmoke;
+    color: black !important;
+}
+
 
 /* Star Background */
 
@@ -124,7 +134,7 @@ body{
     transition: all .4s;
 }
 
-.toTop div{
+.toTop nav{
     color: black;
 }
 
@@ -243,6 +253,47 @@ body{
     transition: all ease 0.2s;
 }
 
+/* Footer */
+.foote{
+    height: auto;
+    background-color: black;
+    min-height: 250px;
+    padding-bottom: 3rem;
+}
+
+.foote p{
+    text-align: center;
+    padding: 0rem 30vw;
+    font-size: 1.8rem;
+}
+
+.foote a{
+    text-align: center;
+    display: block;
+    font-size: 1.8rem;
+    padding: 0 30vw;
+    color: whitesmoke;
+    text-decoration: underline;
+    text-decoration-color: red;
+}
+
+.foote a:hover{
+    color: antiquewhite;
+    transition: all ease 0.2s;
+}
+
+.foote a:active{
+    color: grey;
+    transition: all ease 0.2s;
+}
+
+.foote img{
+    height: 250px;
+    width: auto;
+    position: absolute;
+    left: 40px;
+}
+
 @media only screen and (max-width: 830px){
     .wrapper{
         visibility: hidden;
@@ -256,5 +307,10 @@ body{
         width: 30px;
         height: 30px;
         font-size: 26px;
+    }
+
+    .foote img{
+        visibility: collapse;
+        
     }
 }
