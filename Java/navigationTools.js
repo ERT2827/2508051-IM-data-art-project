@@ -24,6 +24,8 @@ var pages = [{
 
 //top bar
 
+var doNothing = 0;
+
 var topBarArea = document.querySelector(".navArea");
 
     displayTopBar(pages);
