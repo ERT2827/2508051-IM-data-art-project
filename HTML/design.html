@@ -23,11 +23,6 @@
    <!-- Header things -->
    <header>
         <nav class="wrapper">
-            <nav class="logo">
-                <a href="index.html">
-                    <img src="/multimedia/Logo.png" alt="Logo">
-                </a>
-            </nav>
         </nav>
     </header>
 
@@ -36,9 +31,7 @@
         <input type="checkbox">
     </label>
     
-    <aside class="sideBar">
-        <nav id="sideChick">
-        </nav>
+    <aside class="sideBar" id="sideChick">
     </aside>
 
     <!-- Star background -->
@@ -52,6 +45,9 @@
         <img src="/multimedia/Logo.png" alt="" id="fullIMG">
         <span onclick="CloseFull()">X</span>
     </div>
+
+    <!-- This log is only used on phones -->
+    <img src="/multimedia/Logo.png" alt="The NASA Logo" class="mobileLogo">
 
     <!-- content -->
     <main>
@@ -103,13 +99,40 @@
 
     <section class="readingSection">
         <h2>Design: Submission 2</h2>
-
     </section>
 
     <section class="readingSection">
+        <h3>The Wild goose chase.</h3>
+        <p>Before I discuss the design elements of the updated site, I want to discuss and reflect a crazy wild goose chase I went on because I feel it needs to be documented and we don't have blogs anymore.</p>
+        <p>So, going into this assignment, I knew from early on that I wanted to do something relating to sattelites. The SSC API called to me, and so I followed my heart and decided to use it. However, the problem there was that the SSC API is one of the less used ones, purpose built for a very niche range of applications. So it took me a lot of research to try get it working, research which brought me to...</p>
+        <img src="/multimedia/Spacetrack.png" alt="The spacetrack homepage">
+        <p class="highlightedText">SPACETRACK!</p>
+        <p>Spacetrack had all the tools I could ever want to build both my visualizations and my art piece. It was perfect, just perfect, down to every minute detail. So, I asked and recieved permission to use it, and set about trying to get it working as part of my site. That's where the real trouble got started.</p>
+        <p>Every time I tried to call the API I got an error back saying that I had the wrong CORS type. And I spent a long time trying to solve this error, doing everything in my power, until I eventually ran out of documentation online and resorted to emailing the people who run the site. I wish I had have done that earlier, because I got a short, polite email back explaining their API can't be called using Javascript, so I should come up with another solution. Which I might still, but likely won't since server hosting in the ways needed to bypass this issue is a little out of the range of my current assignment. Even if it would be cool to host this site on my own server.</p>
+        <p>So the real question is: what did I learn? Fortunately, it was a lot. I went into this ordeal understanding nothing about APIs, and have left it with a more solid understanding about how APIS and javascript work. I also learnt that not everything is the users fault, even if most things are. The reason why I spent so much time on this distraction was because I assumed that I was somehow the problem because I was a dumb baby who didn't understand API calls. And while that may mostly be true, I have also been reminded once again why when you assume you make an ass out of u and me.</p>
+        <p>So that's my story. Of course I'm not putting this here for sympathy or anything, but rather because I think I've learnt some valuable lessons from this experience and it'd be a waste not to use them.</p>
         <h3>Style Guide (updated):</h3>
         <p>My design for this website is still heavily inspired and driven by NASA's own.</p>
         <img src="/multimedia/NASAPage.png" alt="A picture of the NASA website">
+        <p>I'm using a clean and minimalist approach, accentuated by an animated background. The goal is to capture the feel of space, specifically through the lens of the National Aeronautics and Space Administration and the very well established design language that they have built over their many, many years of operation.</p>
+        <h3>Color:</h3>
+        <img src="/multimedia/colorScheme.jpg" alt="The site's base color palette.">
+        <p>The core palette of my site is red, blue and a shade of white called whitesmoke. The red and blue are taken directly from NASA's own pallete, while whitesmoke is the shade of white I like to use personally. This personal preference is based on the fact that whitesmoke is a slightly off shade of white, reducing brightness compared to plain white while retaining the contrast benefits, resulting in what I believe to be a pleasent viewing experience.</p>
+        <p>This color palette does have some drawbacks. Mainly it is not very color blind friendly, especially the red. This is an unavoidable fact of my chosen aesthetic, one which I constantly have to work around. The first way I do this is by setting most of my site on boxes of text, instead of leaving it floating against the stars in the background, since if I didn't have those boxes this site would be near unreadable, especially with the background. I also use my red sparingly, since blue constrasts better a lot of the time and red green colorblind is the main issue I'm dealing with anyways. After all, 7-10% of men are red green colorblind (‘Color Blindness Facts & Statistics: Prevalence’, no date)</p>
+        <p>My color palette is also used to create an information hierarchy in my site. Sections of black text on the white background are body text. Sections with blue and white are medium priority, while red text is used to highlight sections of importance within other sections of text. Finally, red on a blue background is used to denote the highest priority. By doing my site this way, it should hopefully be a bit easier to navigate thanks to users being able to immediately identify heirarchy by looking at the site.</p>
+        <h3>Layout</h3>
+        <img src="" alt="Picture of learning page">
+        <p>My layout for my site still follows a pretty standard linear flow, with users reading from top to bottom. Because while experimentation is the fuel for learning, my top priority is and has always been responsiveness, because it is very useful to be able to show people my site on mobile or other devices when I want to get feedback on it. So, I stick to a relatively basic layout because it means that the built in functions for responsiveness offered by HTML stay functional. It also makes the site easy to read, since users can just read from top to bottom, and saves time that is much better used elsewhere.</p>
+        <p>Something new I'm trying to do with this layout compared to my last site is adding more multimedia, since it undeniably makes for a richer experience. I'm basically just trying to slip whatever I can in wherever I can, to illustrate my point and to make things look nice.</p>
+        <h3>Font</h3>
+        <h4 class="textShowcase">Ubuntu.</h4>
+        <p>I am using a font called Ubuntu, which is a solid sans serif font with a smoother feel. I chose it for two reasons: Firstly, it is very legible, at least to me. I would love to hear the feedback of someone who struggles with reading on this. Two, with its bold lines and curved corners, it has a somewhat scifi feel to it. This is good, since it connects well with the space theme that I am going for.</p>
+        <h3>Navigation tools</h3>
+        <img src="" alt="Picture of blog page with all functions available.">
+        <p>I am trying to include a variety of navigation tools where possible, since ease of use in this site should be top priority. Especially in a site so simple. Currently, my navigation mainly consists of the top bar, along with some other links in the site, a link bar that allows quick navigation of the blog page, and a button that allows the user to return to the top of the page. I've also added a footer, which should make it easier to tell when you reach the bottom of the site since that was an issue previously.</p>
+        <h3>Using D3</h3>
+        <img src="/multimedia/graph.png" alt="A picture of my first D3 graph.">
+        <p>D3 has been -to put it bluntly- a pain to use. Not because of the functionality of D3 itself mind you, but rather because of how many overlapping functions it has. Because of this, a solution that works for one person simply won't work for another, and it creates a great deal of complication for me as I have to try stitch together solutions. It's also very finicky, with some small changes completely breaking functions that were otherwise working perfectly. All of this is compounded by the fact my data is being processed inside the code first, as opposed to being fed straight into D3, so that I can get the information I want to display out the raw data. None of this has entirely been unsolvable so far, but my second graph has come pretty close, since it is currently broken with no way of fixing it that I can see.</p>
     </section>
 
     <section class="references">
@@ -119,6 +142,7 @@
         <cite>Font Source: <a href="https://fonts.google.com/specimen/Ubuntu">Click Here</a></cite>
         <cite>Knaflic: Knaflic, C. (2015) Storytelling with Data: A Data Visualization Guide for Business Professionals. New Jersey: John Wiley & Sons.</cite>
         <cite>Wood: Wood, T. (2020) How many satellites are operating in space? | World Economic Forum. Available at: https://www.weforum.org/agenda/2020/10/visualizing-easrth-satellites-sapce-spacex/ (Accessed: 14 August 2023).</cite>
+        <cite>‘Color Blindness Facts & Statistics: Prevalence’ (no date) Color Blindness. Available at: <a href="https://www.colour-blindness.com/general/prevalence/">https://www.colour-blindness.com/general/prevalence/</a> (Accessed: 26 August 2023).</cite>
     </section>
 
     <section>
@@ -132,6 +156,13 @@
     <a href="#" class="toTop">
         <nav>↑</nav>
     </a>
+
+    <footer class="foote">
+        <img src="/multimedia/Helmet.png" alt="An astronaut's helmet">
+        <p>This site couldn't exist without the hard work of the scientists at NASA. Go check out their site for much more amazing space information at this link here:</p>
+        <a href="https://www.nasa.gov/">Space is so COOL!!!</a>
+    </footer>
+
 
 
     <!-- Scripts -->

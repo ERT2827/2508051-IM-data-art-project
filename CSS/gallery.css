@@ -11,6 +11,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     background-color: rgba(96, 96, 96, 0.8);
+    padding: 5rem 0;
 }
 
 .image-Gallery img{

@@ -19,15 +19,9 @@
     <link rel="shortcut icon" href="/multimedia/Logo.png">
 </head>
 <body>
-
-    <!-- Header things -->
-   <header>
+        <!-- Header things -->
+    <header>
         <nav class="wrapper">
-            <nav class="logo">
-                <a href="index.html">
-                    <img src="/multimedia/Logo.png" alt="Logo">
-                </a>
-            </nav>
         </nav>
     </header>
 
@@ -35,10 +29,8 @@
     <label class="HamMenu">
         <input type="checkbox">
     </label>
-    
-    <aside class="sideBar">
-        <nav id="sideChick">
-        </nav>
+
+    <aside class="sideBar" id="sideChick">
     </aside>
 
     <!-- Star background -->
@@ -47,10 +39,24 @@
         <img src="/multimedia/star-galaxy.gif" alt="A glittering sky of stars">
     </span> 
 
+    <!-- This log is only used on phones -->
+    <img src="/multimedia/Logo.png" alt="The NASA Logo" class="mobileLogo">
+
     <!-- content -->
     <main>
 
-    <section class="blogPost">
+    <section class="readingSection">
+        <h1>Welcome to the Blog</h1>
+        <p>Sadly it's not space themed. This section of the site is really only for markers and those really, really interested in my academic work.</p>
+    </section>
+
+    <section class="quickSelect">
+        <h2>Article Quick selection:</h2>
+        <a href="#closeRead">Close Reading</a>
+        <a href="#criticalRef">Critical Reflection</a>
+    </section>
+
+    <section class="blogPost" id="closeRead">
         <h2>Close Reading - Overview of Data Visualisation</h2>
         <h3>What is being said:</h3>
         <p>The main reading for this blog is a chapter written Qi Li about Data Visualization. It mainly serves as a technical outline, with a particular focus being placed upon the various possible types of representation for data and also the history of data representation as a practice. There’s also an overview of the benefits of data representation, which are: Representing lots of data immediately; easier identification of patterns; easier quality control through identifying patterns; improved understanding of large- and small-scale data (Li, 2020: 18). </p><p>
@@ -69,7 +75,7 @@
         </p>
     </section>
 
-    <section class="blogPost">
+    <section class="blogPost" id="criticalRef">
         <h2>Blog Essay 2: Critical Reflection – Proposed UI and UX.</h2>
         <h3>Introduction:</h3>
         <p>This essay is a critical reflection upon the UI -and by extension UX- of my second semester website, which will be broken up into two halves. In the first, I will be discussing the elements that already exist in my site, and reflecting about what I think works, as well as what I think could be improved. In the second half, I will be discussing the plans that I need to implement going forwards, along with how I plan to implement them. Both will be supplemented by wireframes and images. This reflection will primarily be based on the text Storytelling with Data: A Data Visualization Guide for Business Professionals by Cole Knaflic (2015), with additional sources being used to supplement where necessary.
@@ -111,10 +117,10 @@
 
         <p>My plan for my design page is to create something eye catching and engaging. The problem is that my aesthetic for the rest of the site has backed this section into a corner. The background, for one, means that the entire site needs to be built around readability against black, which is usually harder than readability against white. My NASA inspired palette also poses some issues since Red is currently being used as a highlight colour. This could potentially become an accessibility problem down the line since 7-10% of men alone are red-green colour blind (‘Color Blindness Facts & Statistics: Prevalence’, no date). This means it’s something I need to be aware of, especially with such a muted palette (Knaflic, 2015: 122). I also need to use the correct visuals for each type of data, but that’s something I’ll be able to get a better feel for once I start my work properly.</p>
         <h3>References:</h3>
-        <p>‘Color Blindness Facts & Statistics: Prevalence’ (no date) Color Blindness. Available at: <a href="https://www.colour-blindness.com/general/prevalence/">https://www.colour-blindness.com/general/prevalence/</a> (Accessed: 26 August 2023).</p>
-        <p>Daivee (2017) ‘The 3-click rule: myth or fact?’, IEEE Brand Experience, 9 May. Available at: <a href="https://brand-experience.ieee.org/the-3-click-rule-myth-or-fact/">https://brand-experience.ieee.org/the-3-click-rule-myth-or-fact/</a> (Accessed: 26 August 2023).</p>
-        <p>Knaflic, C. (2015) Storytelling with Data: A Data Visualization Guide for Business Professionals. 1st edn. Wiley.</p>
-        <p>Li, Q. (2020) ‘Overview of Data Visualization’, in Li, Q., Embodying Data. Singapore: Springer Singapore, pp. 17–47. Available at: <a href="https://doi.org/10.1007/978-981-15-5069-0_2.">https://doi.org/10.1007/978-981-15-5069-0_2.</a></p>
+        <cite>‘Color Blindness Facts & Statistics: Prevalence’ (no date) Color Blindness. Available at: <a href="https://www.colour-blindness.com/general/prevalence/">https://www.colour-blindness.com/general/prevalence/</a> (Accessed: 26 August 2023).</cite>
+        <cite>Daivee (2017) ‘The 3-click rule: myth or fact?’, IEEE Brand Experience, 9 May. Available at: <a href="https://brand-experience.ieee.org/the-3-click-rule-myth-or-fact/">https://brand-experience.ieee.org/the-3-click-rule-myth-or-fact/</a> (Accessed: 26 August 2023).</cite>
+        <cite>Knaflic, C. (2015) Storytelling with Data: A Data Visualization Guide for Business Professionals. 1st edn. Wiley.</cite>
+        <cite>Li, Q. (2020) ‘Overview of Data Visualization’, in Li, Q., Embodying Data. Singapore: Springer Singapore, pp. 17–47. Available at: <a href="https://doi.org/10.1007/978-981-15-5069-0_2.">https://doi.org/10.1007/978-981-15-5069-0_2.</a></cite>
     </section>
 
     </main>
@@ -122,6 +128,13 @@
     <a href="#" class="toTop">
         <nav>↑</nav>
     </a>
+
+    <footer class="foote">
+        <img src="/multimedia/Helmet.png" alt="An astronaut's helmet">
+        <p>This site couldn't exist without the hard work of the scientists at NASA. Go check out their site for much more amazing space information at this link here:</p>
+        <a href="https://www.nasa.gov/">Space is so COOL!!!</a>
+    </footer>
+
 
     <!-- scripts -->
     <script src="/Java/navigationTools.js"></script>

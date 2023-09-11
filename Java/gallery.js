@@ -39,6 +39,31 @@ var designIMG = [{
     img: "/multimedia/Art2.jpg",
     desc: "A poor 2D representation of what I ultimately want to make in 3d for my final art piece.",
     alt: "Stars being blotted out by red",
+},{
+    id: 9,
+    img: "/multimedia/Learningpage.jpg",
+    desc: "A wireframe of my learning page. This was made before the crunch, since I had more I wanted to work out.",
+    alt: "A drawing of the learning page",
+},{
+    id: 10,
+    img: "/multimedia/genericWireframe.jpg",
+    desc: "A wireframe showing a vertical slice of my site's features.",
+    alt: "A wireframe showing multiple features",
+},{
+    id: 11,
+    img: "/multimedia/Wireframept2.jpg",
+    desc: "A continuation of the last wireframe. I would normally go page by page, but I lost too much time wrangling APIs for that.",
+    alt: "A wireframe showing multiple features",
+},{
+    id: 12,
+    img: "/multimedia/VisualizationFrames.jpg",
+    desc: "Visualizations of what I want for my data visualizations. Current 1 and 3 are implemented.",
+    alt: "An image with graphs",
+},{
+    id: 13,
+    img: "/multimedia/mobileFrame.jpg",
+    desc: "A small wireframe showing the unique features of the mobile site.",
+    alt: "A picture of the mobile home page",
 },]
 
 

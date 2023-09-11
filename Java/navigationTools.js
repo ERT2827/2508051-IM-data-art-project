@@ -72,11 +72,17 @@ if(sideBarArea != null){
 }
 
 function displaysideBar(pageses) {
+    var aside = document.getElementById("sideChick");
+
+    var nav = document.createElement("nav");
+
+    aside.append(nav);
+
     var displaysideBar = pageses.map(function (pageses){
         return `<li><a href="${pageses.location}">${pageses.text}</a></li>`;
     }).join(" ");
 
-    sideBarArea.innerHTML = displaysideBar;
+    nav.innerHTML = displaysideBar;
 }
 
 //to top

@@ -11,8 +11,8 @@
 }
 
 .highlightedText{
-    color: red;
-    font-style: bold;
+    color: red !important;
+    font-weight: 800 !important;
 }
 
 .readingSection{
@@ -52,7 +52,7 @@
     padding: 1rem 1.5rem;
     background-color: whitesmoke;
     color: black;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .readingSection li{
@@ -134,7 +134,7 @@ figcaption {
     padding: 1rem 2.2rem;
     background-color: whitesmoke;
     color: black;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
 }
 
 .blogPost a{
@@ -148,6 +148,15 @@ figcaption {
     height: auto;
 }
 
+.blogPost cite{
+    padding: 1rem 1.5rem;
+    background-color: whitesmoke;
+    color: black;
+    font-size: 1.1rem;
+    width: 98%;
+    word-wrap: break-word;
+}
+
 /* reference section */
 .references {
     background-color: whitesmoke;
@@ -155,10 +164,8 @@ figcaption {
     display: flex;
     margin: 15vh 10vw;
     border-radius: 15px;
-    justify-content:left;
-    align-items:baseline;
     flex-direction: column;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
 }
 
 .references cite{
@@ -192,6 +199,42 @@ figcaption {
 .references a:active{
     color: rgb(79, 79, 255);
     transition: all ease 0.2s;
+}
+
+/* style for showcasing font */
+
+.textShowcase{
+    text-align: center;
+    color: black;
+    font-size: 4rem;
+}
+
+/* Style for the article quick select */
+
+.quickSelect{
+    background-color: whitesmoke;
+    color: black;
+    display: flex;
+    margin: 15vh 10vw;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 1rem 0;
+}
+
+.quickSelect h2{
+    color: black;
+    padding-right: 1rem;
+}
+
+.quickSelect a{
+    color: black;
+    font-size: 1.6rem;
+    padding: 0.4rem;
+    border-width: 0 0.1rem 0 0.1rem;
+    border-style: solid;
+    border-color: rgb(79, 79, 255);
 }
 
 /* Animated arrow */
@@ -234,7 +277,7 @@ figcaption {
 .down {
     animation: downarrow 0.6s infinite alternate ease-in-out;
     border-top:2em solid whitesmoke;
-  }
+}
 
 @media only screen and (max-width: 830px){
     .splashText{
