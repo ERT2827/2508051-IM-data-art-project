@@ -99,9 +99,9 @@ body{
     top: 0;
     left: 0;
 
-    align-items: center;
+    /* align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 .backGround img{
@@ -299,6 +299,8 @@ body{
 .mobileLogo{
     visibility: collapse;
     position: absolute;
+    width: 1px;
+    height: auto;
 }
 
 @media only screen and (max-width: 830px){
@@ -319,5 +321,12 @@ body{
     .foote img{
         visibility: collapse;
         
+    }
+
+    .mobileLogo{
+        visibility: visible;
+        top: 5px;
+        left: 40vw;
+        width: 20vw;
     }
 }
