@@ -1,22 +1,22 @@
 var pages = [{
     ID: 1,
-    location: "/index.html",
+    location: "/2508051-IM-data-art-project/index.html",
     text: "Home"
 },{
     ID: 2,
-    location: "/HTML/learning.html",
+    location: "/2508051-IM-data-art-project/HTML/learning.html",
     text: "Learning"
 },{
     ID: 3,
-    location: "/HTML/art.html",
+    location: "/2508051-IM-data-art-project/HTML/art.html",
     text: "Art"
 },{
     ID: 4,
-    location: "/HTML/design.html",
+    location: "/2508051-IM-data-art-project/HTML/design.html",
     text: "Design"
 },{
     ID: 5,
-    location: "/HTML/blog.html",
+    location: "/2508051-IM-data-art-project/HTML/blog.html",
     text: "Blog"
 },]
 

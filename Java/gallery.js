@@ -1,67 +1,67 @@
 var designIMG = [{
     id: 1,
-    img: "/multimedia/Logo.png",
+    img: "/2508051-IM-data-art-project/multimedia/Logo.png",
     desc: "The NASA logo",
     alt: "The NASA logo"
     
 },{
     id: 2,
-    img: "/multimedia/star-galaxy.gif",
+    img: "/2508051-IM-data-art-project/multimedia/star-galaxy.gif",
     desc: "A gif of sparkling stars",
     alt: "The gif I use for my background"
 },{
     id: 3,
-    img: "/multimedia/Text Sample.png",
+    img: "/2508051-IM-data-art-project/multimedia/Text Sample.png",
     desc: "A sample image of my font style",
     alt: "A text sample",
 },{
     id: 4,
-    img: "/multimedia/colorScheme.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/colorScheme.jpg",
     desc: "My current basic color pallete.",
     alt: "A color palette",
 },{
     id: 5,
-    img: "/multimedia/Basic ideas.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/Basic ideas.jpg",
     desc: "These are my first, basic wireframes.",
     alt: "My basic wireframes",
 },{
     id: 6,
-    img: "/multimedia/Knaflic.png",
+    img: "/2508051-IM-data-art-project/multimedia/Knaflic.png",
     desc: "An excerpt from Knaflic, showing the kind of information that they offer.",
     alt: "An excerpt from Knaflic",
 },{
     id: 7,
-    img: "/multimedia/updatedIdeas.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/updatedIdeas.jpg",
     desc: "An update to my basic wireframes to reflect the current site. I would normally do more, but that's not currently possible with my injury.",
     alt: "My updated rough wireframes",
 },{
     id: 8,
-    img: "/multimedia/Art2.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/Art2.jpg",
     desc: "A poor 2D representation of what I ultimately want to make in 3d for my final art piece.",
     alt: "Stars being blotted out by red",
 },{
     id: 9,
-    img: "/multimedia/Learningpage.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/Learningpage.jpg",
     desc: "A wireframe of my learning page. This was made before the crunch, since I had more I wanted to work out.",
     alt: "A drawing of the learning page",
 },{
     id: 10,
-    img: "/multimedia/genericWireframe.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/genericWireframe.jpg",
     desc: "A wireframe showing a vertical slice of my site's features.",
     alt: "A wireframe showing multiple features",
 },{
     id: 11,
-    img: "/multimedia/Wireframept2.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/Wireframept2.jpg",
     desc: "A continuation of the last wireframe. I would normally go page by page, but I lost too much time wrangling APIs for that.",
     alt: "A wireframe showing multiple features",
 },{
     id: 12,
-    img: "/multimedia/VisualizationFrames.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/VisualizationFrames.jpg",
     desc: "Visualizations of what I want for my data visualizations. Current 1 and 3 are implemented.",
     alt: "An image with graphs",
 },{
     id: 13,
-    img: "/multimedia/mobileFrame.jpg",
+    img: "/2508051-IM-data-art-project/multimedia/mobileFrame.jpg",
     desc: "A small wireframe showing the unique features of the mobile site.",
     alt: "A picture of the mobile home page",
 },]
