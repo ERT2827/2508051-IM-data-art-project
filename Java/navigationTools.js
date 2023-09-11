@@ -20,6 +20,8 @@ var pages = [{
     text: "Blog"
 },]
 
+//changes
+
 //top bar
 
 var topBarArea = document.querySelector(".navArea");
