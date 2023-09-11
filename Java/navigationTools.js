@@ -44,7 +44,7 @@ function displayTopBar(pageses){
     var logoLink = document.createElement('a');
     logoLink.href = "index.html";
     var img = document.createElement('img');
-    img.src = "/multimedia/Logo.png";
+    img.src = "/2508051-IM-data-art-project/multimedia/Logo.png";
     img.alt = "Logo";
 
     var ul = document.createElement('ul');
