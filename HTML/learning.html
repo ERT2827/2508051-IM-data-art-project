@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning</title>
+
+    <meta name="description" content="Learning page of IM art website.">
+    <meta name="keywords" content="Space, NASA, Satellites, Project">
+    <meta name="author" content="Bruce Tonkin">
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/uniqueStyles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    
+    <link rel="shortcut icon" href="/multimedia/Logo.png">
+
+</head>
+<body>
+    <!-- Header things -->
+    <header>
+        <nav class="wrapper">
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <label class="HamMenu">
+        <input type="checkbox">
+    </label>
+
+    <aside class="sideBar" id="sideChick">
+    </aside>
+
+    <!-- Star background -->
+
+    <span class="backGround">
+        <img src="/multimedia/star-galaxy.gif" alt="A glittering sky of stars">
+    </span> 
+
+    <!-- This log is only used on phones -->
+    <img src="/multimedia/Logo.png" alt="The NASA Logo" class="mobileLogo">
+
+    <!-- main content -->
+    <main>
+    <section class="readingSection">
+        <h1>How often do you think about space junk?</h1>
+        <p>NASA's SSC tracks <span class="highlightedText" id="liveData"></span> sattelites. That represents less than a percent of the around 11 000<span class="highlightedText"> Payloads </span> currently orbiting the earth (Spacetrack, 2023)</p>
+        <p>Space junk is a building issue for future generations, one that I am using this chance to bring attention to both because it's worth talking about, and also because I believe we need to readjust the way we, as a society, discuss future problems.</p>
+    </section>
+
+    <!-- At this point there would be a graph showing the increase. -->
+    <section id="first" class="graphHolder"></section>
+
+    <section class="readingSection">
+        <p>This graph shows how many satellites NASA's SSC has started tracking on its database by half decade. It gives a good idea of the quantity of launches from the world's leading space agency, which can then be extrapolated to the rest of the world. In particular, it's plain to see there has been a near constant increase in the number of launches from 1950 when the first launched happened to now.</p>
+        <p>The problem isn't just the amount of sattelites and payloads. No, the real problem is the vast amounts of debris that results from the launch of these sattelites. Everything from massive boosters to broken parts to even loose screws can be a problem.</p>
+        <p>More satellites mean more junk, and more junk also means more destroyed satellites, perpetuating the cycle even more. Yes, space junk is already causing havoc, even if it isn't doing damage to the earth yet. Satellites are in constant danger of being destroyed, and the International Space Station in particular is constantly having to dodge space debris, which represents a large and genuine threat to all those living aboard the station.</p>
+        <p>This isn't just a NASA problem either. While they make up most of the launches, other countries like China, France and Japan are also launching sattelites as well. In fact, 2022 was an all time record year for the number of sattelite launches. This can be seen on the graph by how the amount of sattelites launched between 2020 and 2023 is already around half of what was launched during the five years before 2020.</p>
+    </section>
+
+    <!-- visualization of sattellites by country -->
+    <h1 class="splashText">Placeholder for interactive graph</h1>
+
+    
+    <section class="readingSection">
+        <p>This graph will show the amount of satellites launched by different countries, and this text will reflect on that data.</p>
+    </section>
+
+    <section id="second" class="graphHolder"></section>
+
+    <section class="readingSection">
+        <p>This graph shows the number of active satellites compared to the number of inactive ones.</p>
+        <p>Be it through bad design or sheer misfortune, satellites are being taken offline and replaced constantly, which this graph shows is becoming increasingly problematic as the number of inactive satellites overtakes the number of working ones.</p>
+    </section>
+
+    <!-- I'd also like to do a visualization of how close the majority of the SSC satellites are to being decommisioned -->
+
+    <section class="readingSection">
+        <p>So what's the solution to all this? What's the endgame? For now, we don't know. Satellite recovery and disposal is still extremely expensive, not to mention an easily overlooked issue since it doesn't really effect anything directly yet. But that's the keyword, <span class="highlightedText">yet.</span> This is a brewing issue for humanity, no two ways about it, and that's why I chose to focus on it for this project. Because by keeping problems in mind, it's easier to avoid exacerbating them, and also it means that when it becomes everyones problem, the discussion has already been going for years.</p>
+    </section>
+
+    <section class="references">
+        <h2>References: </h2>
+        <cite>NASA SSC API: <a href="https://sscweb.gsfc.nasa.gov/WebServices/REST/"> Click Here</a></cite>
+        <cite>Space Track: <a href="https://www.space-track.org/">Click Here</a></cite>
+    </section>
+
+    </main>
+
+
+    <a href="#" class="toTop">
+        <nav>↑</nav>
+    </a>
+
+    <footer class="foote">
+        <img src="/multimedia/Helmet.png" alt="An astronaut's helmet">
+        <p>This site couldn't exist without the hard work of the scientists at NASA. Go check out their site for much more amazing space information at this link here:</p>
+        <a href="https://www.nasa.gov/">Space is so COOL!!!</a>
+    </footer>
+
+
+    <script src="/Java/navigationTools.js"></script>
+    <script src="/Java/graphMaker.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Design</title>
+
+    <meta name="description" content="Design outline page of IM art website.">
+    <meta name="keywords" content="Space, NASA, Satellites, Project">
+    <meta name="author" content="Bruce Tonkin">
+
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/uniqueStyles.css">
+    <link rel="stylesheet" href="/CSS/gallery.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/multimedia/Logo.png">
+</head>
+<body>
+   <!-- Header things -->
+   <header>
+        <nav class="wrapper">
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <label class="HamMenu">
+        <input type="checkbox">
+    </label>
+    
+    <aside class="sideBar" id="sideChick">
+    </aside>
+
+    <!-- Star background -->
+
+    <span class="backGround">
+        <img src="/multimedia/star-galaxy.gif" alt="A glittering sky of stars">
+    </span> 
+
+    <!-- This is used for the gallery -->
+    <div class="full-Image" id="fullIMGBox">
+        <img src="/multimedia/Logo.png" alt="" id="fullIMG">
+        <span onclick="CloseFull()">X</span>
+    </div>
+
+    <!-- This log is only used on phones -->
+    <img src="/multimedia/Logo.png" alt="The NASA Logo" class="mobileLogo">
+
+    <!-- content -->
+    <main>
+
+    <section class="readingSection">
+        <h1>Welcome to the design page</h1>
+        <p>This is where I will be discussing the design and philosophy of this website in depth.</p>
+    </section>
+    
+    <section class="readingSection">
+        <h3>Initial design and goals</h3>
+        <p>Unlike my previous site, where I was largely operating blind the whole time, I now have a fair bit more experience making websites. With that in mind, here are some of my main goals for this project:</p>
+        <ul>
+            <li>Start stronger: I had touched HTML briefly once in my life before this year. Now I have a semesters worth of experience to work from. So that means keeping up the same standard, and improving on it as I master new skills.</li>
+            <li>Don't waste time repeating things: I have a whole library of experiences and functions to work from going into this project, which I plan on putting to good use to save me time and allow me to put the bulk of my focus on learning D3 and dealing with the NASA API.</li>
+            <li>Do better planning: as mentioned, I didn't exactly know what I was doing last semester, and now I do. So that means I can go in with a far more comprehensive idea about what I am actually doing with myself this semester.</li>
+            <li>Learn a lot: API's are the backbone of a great deal of web development, and this course serves as an excellent way to learn them so that I can utilize them in both future personal and professional projects.</li>
+            <li>Keep better practices: My old code is kind of a mess, which is more due to my own laziness than anything. I plan on annotating this code better and commiting to certain practices like only using Var for the sake of keeping my code cleaner and making it easier to go back to, instead of having to relearn it every time I take a week off to focus on another project.</li>
+            <li>Use the proper semantic elements: I only really learned what Semantic elements where about 2/3s of the way into the last website, but now I don't have that issue so I can start off with the correct practices regarding them.</li>
+            <li>Have fun with space: Space is really cool, and I do my best work when I'm passionate about the topic. So, I'm going to be sure to embrace the inherent fun of this assignment both thematically for my site and for myself, with the goal of using that passion to output the best possible final product. Because, come on. We're working with NASA. That's cool no matter how you look at it.</li>
+        </ul>
+    </section>
+
+    <section class="readingSection">
+        <h3>Style Guide:</h3>
+        <h3>Core principles:</h3>
+        <p>My main guiding statement for this project as I go forwards is this: <span class="highlightedText">Capture the wonder of space.</span></p>
+        <p>This immediately gives me a solid starting point for my design, since there are a great many websites that focus on space out there already, and because of that I'm able to draw upon them for reference when building my own site. The most obvious starting point amidst these is the National Aeronautics and Space Administration's own website. </p>
+        <img src="/multimedia\NASAPage.png" alt="A picture of the NASA website">
+        <p>NASA has a good website, although I need to acknowledge that its focus is very different to mine. The big difference is that NASA has an extremely broad set of focuses, from sattelites to Space Shuttles to the environment, while my site is purely going to be concerned with the movements of sattelites. This narrows my scope somewhat, so I will narrow my scope and adjust my parameters accordingly.</p>
+        <p>So, that gives me a goal: Create a site that is easily readable, but still satisfies that awe that space and its wonders is known to inspire.</p>
+        <p>The first step towards doing this, for me, was deciding on core design elements. My font, my color scheme, the basic layout and the readability of my information.</p>
+        <ul>
+            <li>For my font, I went with a style called Ubuntu. It's a strong Sans Serif font that is close to the font NASA uses on their site. Truth be told, I'm considering switching it for the exact font Nasa uses, but that's only a thought right now since I'm still happy with this font.</li>
+            <li>I believe a strong color scheme is key to the design of a website, especially one that is consistently used. It allows the viewer to quickly and easily categorize information, reducing processing time and increasing understanding. It's almost like doing the mental heavy lifting for the user. Because of that, I plan on using two main colors to highlight information. Blue backgrounds are to be used when important information is being presented on its own, while red will be used to highlight important information which is part of a larger section. I chose this color scheme because it matches NASA's, adding more to the theme and aesthetic of the site. This is with the understanding that the usage of Red could exclude colorblind users.</li>
+            <li>My site is going to use a largely homogenized layout, both to maintain consistency and ease of use, as well as reducing dev load due to the relatively small scope of this site. Having the basic ideas down so soon is still a major win for this site though, since it means that far less time is spent agonizing over site decisions.</li>
+            <li>A big focus with this project is providing interesting information in a readable manner, and there is perhaps no bigger tool for this than the reading "Storytelling with Data" by Cole Knaflic. The book provides a useful outline about how one can go about presenting data in a way that is readable and interesting. It's extremely useful to have that kind of information available as a resource, since while I do feel as though I'm observant enough to somewhat understand how other sites present their information, seeing an actual guide to the concepts involved with storytelling using data in an easily readable format is a massively useful tool to have.</li>
+        </ul>        
+
+    </section>
+
+    <section class="readingSection">
+        <h3>So... What am I doing for my art piece?</h3>
+        <p>My initial plan for my art piece was to make a small program that painted the sky with pretty colors and call it a day there, but now I'm not so sure. The goal of this website is slowly crystalizing into something more firm, and part of that is definitely that I want to take an awareness approach to my art piece. As the home page says, there are nearly 6000 sattelites in the sky, and only around half of those work (Wood, 2020). Space junk is high on the list of future problems for mankind, and so I'd like to raise a bit of awareness about it with the hopes of causing at least one interesting conversation.</p>
+        <img src="/multimedia/Art2.jpg" alt="Stars being blotted out by red">
+        <p>So my idea for right now is to build a 3d scene where the user can look at the stars but they're blocked by satellites, which will cast these large red dots. Maybe there'll also be an option to turn the sattelites off as well, we'll see. I might also use <a href="https://solarsystem.nasa.gov/resources/2393/earth-3d-model/">this</a> model for something, but so far it's all just ideas and figuring out how I can best use the API to create something meaningful.</p>
+        <p>What I can say for sure is that my original idea is scrapped. It simply lacks the level of thought provocation that I want out of this project, and I try not to be someone who's so sacred about their ideas they self sabotage.</p>
+    </section>
+
+    <section class="readingSection">
+        <h2>Design: Submission 2</h2>
+    </section>
+
+    <section class="readingSection">
+        <h3>The Wild goose chase.</h3>
+        <p>Before I discuss the design elements of the updated site, I want to discuss and reflect a crazy wild goose chase I went on because I feel it needs to be documented and we don't have blogs anymore.</p>
+        <p>So, going into this assignment, I knew from early on that I wanted to do something relating to sattelites. The SSC API called to me, and so I followed my heart and decided to use it. However, the problem there was that the SSC API is one of the less used ones, purpose built for a very niche range of applications. So it took me a lot of research to try get it working, research which brought me to...</p>
+        <img src="/multimedia/Spacetrack.png" alt="The spacetrack homepage">
+        <p class="highlightedText">SPACETRACK!</p>
+        <p>Spacetrack had all the tools I could ever want to build both my visualizations and my art piece. It was perfect, just perfect, down to every minute detail. So, I asked and recieved permission to use it, and set about trying to get it working as part of my site. That's where the real trouble got started.</p>
+        <p>Every time I tried to call the API I got an error back saying that I had the wrong CORS type. And I spent a long time trying to solve this error, doing everything in my power, until I eventually ran out of documentation online and resorted to emailing the people who run the site. I wish I had have done that earlier, because I got a short, polite email back explaining their API can't be called using Javascript, so I should come up with another solution. Which I might still, but likely won't since server hosting in the ways needed to bypass this issue is a little out of the range of my current assignment. Even if it would be cool to host this site on my own server.</p>
+        <p>So the real question is: what did I learn? Fortunately, it was a lot. I went into this ordeal understanding nothing about APIs, and have left it with a more solid understanding about how APIS and javascript work. I also learnt that not everything is the users fault, even if most things are. The reason why I spent so much time on this distraction was because I assumed that I was somehow the problem because I was a dumb baby who didn't understand API calls. And while that may mostly be true, I have also been reminded once again why when you assume you make an ass out of u and me.</p>
+        <p>So that's my story. Of course I'm not putting this here for sympathy or anything, but rather because I think I've learnt some valuable lessons from this experience and it'd be a waste not to use them.</p>
+        <h3>Style Guide (updated):</h3>
+        <p>My design for this website is still heavily inspired and driven by NASA's own.</p>
+        <img src="/multimedia/NASAPage.png" alt="A picture of the NASA website">
+        <p>I'm using a clean and minimalist approach, accentuated by an animated background. The goal is to capture the feel of space, specifically through the lens of the National Aeronautics and Space Administration and the very well established design language that they have built over their many, many years of operation.</p>
+        <h3>Color:</h3>
+        <img src="/multimedia/colorScheme.jpg" alt="The site's base color palette.">
+        <p>The core palette of my site is red, blue and a shade of white called whitesmoke. The red and blue are taken directly from NASA's own pallete, while whitesmoke is the shade of white I like to use personally. This personal preference is based on the fact that whitesmoke is a slightly off shade of white, reducing brightness compared to plain white while retaining the contrast benefits, resulting in what I believe to be a pleasent viewing experience.</p>
+        <p>This color palette does have some drawbacks. Mainly it is not very color blind friendly, especially the red. This is an unavoidable fact of my chosen aesthetic, one which I constantly have to work around. The first way I do this is by setting most of my site on boxes of text, instead of leaving it floating against the stars in the background, since if I didn't have those boxes this site would be near unreadable, especially with the background. I also use my red sparingly, since blue constrasts better a lot of the time and red green colorblind is the main issue I'm dealing with anyways. After all, 7-10% of men are red green colorblind (‘Color Blindness Facts & Statistics: Prevalence’, no date)</p>
+        <p>My color palette is also used to create an information hierarchy in my site. Sections of black text on the white background are body text. Sections with blue and white are medium priority, while red text is used to highlight sections of importance within other sections of text. Finally, red on a blue background is used to denote the highest priority. By doing my site this way, it should hopefully be a bit easier to navigate thanks to users being able to immediately identify heirarchy by looking at the site.</p>
+        <h3>Layout</h3>
+        <img src="" alt="Picture of learning page">
+        <p>My layout for my site still follows a pretty standard linear flow, with users reading from top to bottom. Because while experimentation is the fuel for learning, my top priority is and has always been responsiveness, because it is very useful to be able to show people my site on mobile or other devices when I want to get feedback on it. So, I stick to a relatively basic layout because it means that the built in functions for responsiveness offered by HTML stay functional. It also makes the site easy to read, since users can just read from top to bottom, and saves time that is much better used elsewhere.</p>
+        <p>Something new I'm trying to do with this layout compared to my last site is adding more multimedia, since it undeniably makes for a richer experience. I'm basically just trying to slip whatever I can in wherever I can, to illustrate my point and to make things look nice.</p>
+        <h3>Font</h3>
+        <h4 class="textShowcase">Ubuntu.</h4>
+        <p>I am using a font called Ubuntu, which is a solid sans serif font with a smoother feel. I chose it for two reasons: Firstly, it is very legible, at least to me. I would love to hear the feedback of someone who struggles with reading on this. Two, with its bold lines and curved corners, it has a somewhat scifi feel to it. This is good, since it connects well with the space theme that I am going for.</p>
+        <h3>Navigation tools</h3>
+        <img src="" alt="Picture of blog page with all functions available.">
+        <p>I am trying to include a variety of navigation tools where possible, since ease of use in this site should be top priority. Especially in a site so simple. Currently, my navigation mainly consists of the top bar, along with some other links in the site, a link bar that allows quick navigation of the blog page, and a button that allows the user to return to the top of the page. I've also added a footer, which should make it easier to tell when you reach the bottom of the site since that was an issue previously.</p>
+        <h3>Using D3</h3>
+        <img src="/multimedia/graph.png" alt="A picture of my first D3 graph.">
+        <p>D3 has been -to put it bluntly- a pain to use. Not because of the functionality of D3 itself mind you, but rather because of how many overlapping functions it has. Because of this, a solution that works for one person simply won't work for another, and it creates a great deal of complication for me as I have to try stitch together solutions. It's also very finicky, with some small changes completely breaking functions that were otherwise working perfectly. All of this is compounded by the fact my data is being processed inside the code first, as opposed to being fed straight into D3, so that I can get the information I want to display out the raw data. None of this has entirely been unsolvable so far, but my second graph has come pretty close, since it is currently broken with no way of fixing it that I can see.</p>
+    </section>
+
+    <section class="references">
+        <h2>References:</h2>
+        <cite>Background Gif source: <a href="https://tenor.com/view/star-galaxy-universe-gif-7187362">Click Here</a></cite>
+        <cite>NASA Website: <a href="https://www.nasa.gov/">Click Here</a></cite>
+        <cite>Font Source: <a href="https://fonts.google.com/specimen/Ubuntu">Click Here</a></cite>
+        <cite>Knaflic: Knaflic, C. (2015) Storytelling with Data: A Data Visualization Guide for Business Professionals. New Jersey: John Wiley & Sons.</cite>
+        <cite>Wood: Wood, T. (2020) How many satellites are operating in space? | World Economic Forum. Available at: https://www.weforum.org/agenda/2020/10/visualizing-easrth-satellites-sapce-spacex/ (Accessed: 14 August 2023).</cite>
+        <cite>‘Color Blindness Facts & Statistics: Prevalence’ (no date) Color Blindness. Available at: <a href="https://www.colour-blindness.com/general/prevalence/">https://www.colour-blindness.com/general/prevalence/</a> (Accessed: 26 August 2023).</cite>
+    </section>
+
+    <section>
+        <h3 class="galHeading">GALLERY: </h3>
+        <section class="image-Gallery"></section>
+    </section>
+
+    </main>
+
+
+    <a href="#" class="toTop">
+        <nav>↑</nav>
+    </a>
+
+    <footer class="foote">
+        <img src="/multimedia/Helmet.png" alt="An astronaut's helmet">
+        <p>This site couldn't exist without the hard work of the scientists at NASA. Go check out their site for much more amazing space information at this link here:</p>
+        <a href="https://www.nasa.gov/">Space is so COOL!!!</a>
+    </footer>
+
+
+
+    <!-- Scripts -->
+    <script src="/Java/navigationTools.js"></script>
+    <script src="/Java/gallery.js"></script>
+</body>
+</html>
