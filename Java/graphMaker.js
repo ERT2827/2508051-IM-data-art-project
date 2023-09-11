@@ -6,6 +6,23 @@ var launchDecade = [];
 
 var activeRatio = [];
 
+var timeActive = [
+    {
+        duration: "1-5",
+        quantity: 0
+    },{
+        duration: "6-10",
+        quantity: 0
+    },
+    {
+        duration: "10-20",
+        quantity: 0
+    },{
+        duration: "20+",
+        quantity: 0
+    },
+];
+
 function populateDates(dateArray) {
     var d = 1950;
     
@@ -156,10 +173,39 @@ async function categorize() {
 
     activeRatio[31].quantity = inactiveQ;
 
+    //Duration
+    usefulItems = usefulFile.Observatory[1];
+
+
+    for (i = 0; i < usefulItems.length; i++) {
+        var ST = usefulItems[i].StartTime[1];
+        ST = ST.slice(0,4);
+        ST = parseInt(ST);
+        
+        var ET = usefulItems[i].EndTime[1];
+        ET = ET.slice(0, 4);
+        ET = parseInt(ET);
+
+        if(ET - ST <= 5){
+            timeActive[0].quantity += 1
+        }else if(ET - ST > 5 && ET - ST <= 10 ){
+            timeActive[1].quantity += 1
+        }else if(ET - ST > 10 && ET - ST <= 20 ){
+            timeActive[2].quantity += 1
+        }else{
+            timeActive[3].quantity += 1
+        }
+    }
+
+    console.log(timeActive);
+
+
+
     var liveCount = document.getElementById("liveData");
     liveCount.innerText = totalSat;
     
     graph1();
+    graph3(timeActive);
     graph2();
 }
 
@@ -361,4 +407,48 @@ function graph2() {
 
     render(data);
       
+}
+
+function graph3(){
+
+   // set the dimensions and margins of the graph
+    var margin = {top: 30, right: 30, bottom: 70, left: 60},
+    width = 460 - margin.left - margin.right,
+    height = 400 - margin.top - margin.bottom;
+
+// append the svg object to the body of the page
+var svg = d3.select("#third")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    var x = d3.scaleBand()
+    .domain(d3.range(timeActive.length))
+    .range([ 0, width ]);
+    svg.append("g")
+    .attr("transform", "translate(0," + height + ")")
+    .call(d3.axisBottom(x))
+    .selectAll("text")
+    .attr("transform", "translate(-10,0)rotate(-45)")
+    .style("text-anchor", "end");
+    
+
+    var y = d3.scaleLinear()
+    .domain([0, 40])
+    .range([ height, 0]);
+    svg.append("g")
+    .call(d3.axisLeft(y));
+
+    svg.selectAll("mybar")
+    .data(timeActive)
+    .enter()
+    .append("rect")
+    .attr("x", function(d, i) { return x(i); })
+    .attr("y", function(d) { return y(d.quantity); })
+    .attr("width", x.bandwidth() - 1)
+    .attr("height", function(d) { return height - y(d.quantity); })
+    .attr("fill", "#69b3a2")
+    
 }
