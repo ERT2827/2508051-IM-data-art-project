@@ -15,7 +15,7 @@ var timeActive = [
         quantity: 0
     },
     {
-        duration: "10-20",
+        duration: "11-20",
         quantity: 0
     },{
         duration: "20+",
@@ -317,6 +317,9 @@ function graph2() {
         var innerWidth = width - margin.left - margin.right;
         var innerHeight = height - margin.top - margin.bottom;
 
+        //split array into two and make two lines
+
+
         
         var xScale = d3.scaleTime()
           .domain(d3.extent(data, xValue))
@@ -387,6 +390,7 @@ function graph2() {
         g.selectAll('.line-path').data(nested)
           .enter().append('path')
             .attr('class', 'line-path')
+            .style('fill', 'none')
             .attr('d', d => lineGenerator(d.values))
             .attr('stroke', d => colorScale(d.key));
         
@@ -425,11 +429,11 @@ var svg = d3.select("#third")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     var x = d3.scaleBand()
-    .domain(d3.range(timeActive.length))
+    .domain([d3.extent(timeActive)])
     .range([ 0, width ]);
     svg.append("g")
     .attr("transform", "translate(0," + height + ")")
-    .call(d3.axisBottom(x))
+    .call(d3.axisBottom(x).ticks(4).tickValues(["1-5", "6-10", "11-20", "20+"]))
     .selectAll("text")
     .attr("transform", "translate(-10,0)rotate(-45)")
     .style("text-anchor", "end");
@@ -450,5 +454,25 @@ var svg = d3.select("#third")
     .attr("width", x.bandwidth() - 1)
     .attr("height", function(d) { return height - y(d.quantity); })
     .attr("fill", "#69b3a2")
+
+    svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .attr("x", width)
+        .attr("y", height - 6)
+        .text("Number of years active.");
+
+    svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "end")
+        .attr("y", 6)
+        .attr("dy", ".75em")
+        .attr("transform", "rotate(-90)")
+        .text("Quantity");
+
+    svg.append('text')
+        .attr('class', 'title')
+        .attr('y', -10)
+        .text("Active time of Satellites.");
     
 }
