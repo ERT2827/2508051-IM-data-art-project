@@ -55,10 +55,11 @@ var pagesInd = [{
 //top bar
 
 var fileName = location.href.split("/").slice(-1); 
+console.log(fileName);
 
 var topBarArea = document.querySelector(".navArea");
 
-    if(fileName == "index.html" || fileName == "2508051-IM-data-art-project"){
+    if(fileName == "index.html" || fileName == ""){
         displayTopBar(pagesInd);
     }else{
         displayTopBar(pages);
