@@ -58,7 +58,7 @@ var fileName = location.href.split("/").slice(-1);
 
 var topBarArea = document.querySelector(".navArea");
 
-    if(fileName == "index.html"){
+    if(fileName == "index.html" || fileName == "2508051-IM-data-art-project"){
         displayTopBar(pagesInd);
     }else{
         displayTopBar(pages);
