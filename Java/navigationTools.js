@@ -1,34 +1,70 @@
 var pages = [{
     ID: 1,
-    location: "/2508051-IM-data-art-project/index.html",
+    location: "../index.html",
     text: "Home"
 },{
     ID: 2,
-    location: "/2508051-IM-data-art-project/HTML/learning.html",
+    location: "learning.html",
     text: "Learning"
 },{
     ID: 3,
-    location: "/2508051-IM-data-art-project/HTML/art.html",
+    location: "art.html",
     text: "Art"
 },{
     ID: 4,
-    location: "/2508051-IM-data-art-project/HTML/design.html",
+    location: "design.html",
     text: "Design"
 },{
     ID: 5,
-    location: "/2508051-IM-data-art-project/HTML/blog.html",
+    location: "blog.html",
     text: "Blog"
-},]
+},{
+    ID: 6,
+    location: "../multimedia/Logo.png",
+    text: "Logo"
+}]
+
+var pagesInd = [{
+    ID: 1,
+    location: "index.html",
+    text: "Home"
+},{
+    ID: 2,
+    location: "HTML/learning.html",
+    text: "Learning"
+},{
+    ID: 3,
+    location: "HTML/art.html",
+    text: "Art"
+},{
+    ID: 4,
+    location: "HTML/design.html",
+    text: "Design"
+},{
+    ID: 5,
+    location: "HTML/blog.html",
+    text: "Blog"
+},{
+    ID: 6,
+    location: "multimedia/Logo.png",
+    text: "Logo"
+}]
 
 //changes
 
 //top bar
 
-var doNothing = 0;
+var fileName = location.href.split("/").slice(-1); 
 
 var topBarArea = document.querySelector(".navArea");
 
-    displayTopBar(pages);
+    if(fileName == "index.html"){
+        displayTopBar(pagesInd);
+    }else{
+        displayTopBar(pages);
+    }
+
+    
 
 function displayTopBar(pageses){
     // var displayTopBar = pageses.map(function (pageses){
@@ -42,9 +78,9 @@ function displayTopBar(pageses){
     var nav = document.createElement('nav');
     nav.classList.add('logo');
     var logoLink = document.createElement('a');
-    logoLink.href = "index.html";
+    logoLink.href = `${pageses[0].location}`;
     var img = document.createElement('img');
-    img.src = "/2508051-IM-data-art-project/multimedia/Logo.png";
+    img.src = `${pageses[5].location}`;
     img.alt = "Logo";
 
     var ul = document.createElement('ul');
@@ -57,6 +93,8 @@ function displayTopBar(pageses){
     wrapr.append(ul);
 
     var linkList = document.querySelector('.navArea')
+
+    pageses.pop();
 
     var displayTopBar = pageses.map(function (pageses){
         return `<li><a href="${pageses.location}">${pageses.text}</a></li>`;
@@ -81,6 +119,8 @@ function displaysideBar(pageses) {
     var nav = document.createElement("nav");
 
     aside.append(nav);
+
+    pageses.pop();
 
     var displaysideBar = pageses.map(function (pageses){
         return `<li><a href="${pageses.location}">${pageses.text}</a></li>`;
