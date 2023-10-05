@@ -23,6 +23,8 @@ var timeActive = [
     },
 ];
 
+var interactiveData = [];
+
 function populateDates(dateArray) {
     var d = 1950;
     
@@ -204,10 +206,42 @@ async function categorize() {
 
     var liveCount = document.getElementById("liveData");
     liveCount.innerText = totalSat;
+
+    //data for the interactive array
+
+    usefulFile = await gainData();
+
+    usefulItems = usefulFile.Observatory[1];
+
+    var date = new Date();
+
+    var yaar = date.getFullYear;
+
+    var stillActive = false;
+    
+    usefulItems.forEach(e => {
+        var dt = e.EndTime[1].slice(0, 4)
+        
+        if (dt < yaar) {
+            stillActive = false;
+        }else{
+            stillActive = true;
+        }
+
+        var buildor = {obsvName: e.Name, startTime: e.StartTime[1].slice(0, 4), endTime: e.EndTime[1].slice(0, 4), active: stillActive}
+
+        interactiveData.push(buildor);
+    });
+
+    console.log(interactiveData)
+
+    
+
     
     graph1();
-    graph3(timeActive);
+    graph3();
     graph2();
+    graph4();
 }
 
 
@@ -354,8 +388,9 @@ function graph2() {
 
 function graph3(){
 
-    var data = Object.assign(timeActive.map(({timeRange, quantity}) => ({timeRange, quantity})), {y: "Quantity"})
+    var data = Object.assign(timeActive.map(({duration, quantity}) => ({duration, quantity})), {y: "Quantity"})
 
+    console.log(data);
 
    // set the dimensions and margins of the graph
     var margin = {top: 30, right: 30, bottom: 70, left: 60},
@@ -363,7 +398,7 @@ function graph3(){
     height = 400 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
-var svg = d3.select("#third")
+    var svg = d3.select("#third")
     .append("svg")
     .attr("width", width + margin.left + margin.right)
     .attr("height", height + margin.top + margin.bottom)
@@ -372,7 +407,7 @@ var svg = d3.select("#third")
 
     var x = d3.scaleBand()
         .range([ 0, width ])
-        .domain(data.map(function(d) { return d.timeActive; }))
+        .domain(data.map(function(d) { return d.duration; }))
         .padding(0.2);
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
@@ -393,7 +428,7 @@ var svg = d3.select("#third")
     .data(data)
     .enter()
     .append("rect")
-    .attr("x", function(d) { return x(d.timeRange); })
+    .attr("x", function(d) { return x(d.duration); })
     .attr("y", function(d) { return y(d.quantity); })
     .attr("width", x.bandwidth() - 4)
     .attr("height", function(d) { return height - y(d.quantity); })
@@ -419,4 +454,11 @@ var svg = d3.select("#third")
         .attr('y', -10)
         .text("Active time of Satellites.");
     
+}
+
+async function graph4() {
+    var data = Object.assign(interactiveData.map(({obsvName, startTime, endTime, active}) => ({obsvName, startTime, endTime, active})));
+
+
+    console.log(data);
 }
