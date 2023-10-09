@@ -135,13 +135,38 @@
         <p>D3 has been -to put it bluntly- a pain to use. Not because of the functionality of D3 itself mind you, but rather because of how many overlapping functions it has. Because of this, a solution that works for one person simply won't work for another, and it creates a great deal of complication for me as I have to try stitch together solutions. It's also very finicky, with some small changes completely breaking functions that were otherwise working perfectly. All of this is compounded by the fact my data is being processed inside the code first, as opposed to being fed straight into D3, so that I can get the information I want to display out the raw data. None of this has entirely been unsolvable so far, but my second graph has come pretty close, since it is currently broken with no way of fixing it that I can see.</p>
     </section>
 
+    <section class="readingSection">
+        <h3>Graph planning.</h3>
+        <p>The main focus of the past two iterations of this site has been the graphs. This section will discuss those graphs in depth</p>
+        <h3>Interactive Graph:</h3>
+        <img src="../multimedia/interactiveGraph.png" alt="A picture of the interacte graph">
+        <p>My interactive graph shows the date a satellite becomes active and the date it will go offline, or otherwise stop being tracked, in scatter plot format. The interactivity comes from being able to hover your mouse over an element on the graph, which shows you the name of the satellite you're looking at and the current status, be that active or inactive. The purpose of this is to allow the user to become more familiar with the dataset, which should help better contextualize the other visualizations that I present. I chose to go with blue and black for the two colors since they are both easily visable, and the active satellites being blue should hopefully make them more obviously active.</p>
+        <h3>Static Graphs:</h3>
+        <img src="../multimedia/graph.png" alt="A picture of my first D3 graph.">
+        <p>My first graph is simply to show the increasing volume of satellite launches to provide context for the conversation that is being had in this website. I use a simple line graph, which operates on five year intervals, to display the information in an easily readable manner. This graph shows my choice of color scheme, with the blue. I had the choice of either going with a red or blue color scheme for my graph, and I decided go with the blue since its far more easily readable, even if red may have created slightly more of a sense of urgency (Knaflic, 2015).</p>
+        <img src="../multimedia/graph2.png" alt="A picture of my second D3 graph.">
+        <p>For my second graph, I went with a simple but effective graph that shows with two lines the number of active satellites (in blue) and inactive ones (in red). I chose these colors because blue and red contrast well with each other in this context, and it also fits into the color scheme of my website. The goal of this graph is to demonstrate my main point: that the number of inactive satellites is overtaking the number of active ones rapidly, and I think this chart show that quite well. Something that makes this graph different is the heavier stroke of the line, which is supposed to make picking up both lines easier, especially in your line of site.</p>
+        <img src="../multimedia/graph3.png" alt="A picture of my third D3 graph.">
+        <p>For my third graph, I went with bar graph so I could display clearly the relative amounts of satellites that were active for the specified time period. This graph proved particularly difficult to get the scales working, but in the end I solved it. One issue I still have is that one of the labels is hard to read, but that seems easy to solve.</p>
+        <p>Besides that, the only real other bit of front end work I did during this section was editing some of my text to make more sense and feel less place holder, and I made it so that all the links on my site are actually links for more logical navigation.</p>
+        <h3>Learning from past mistakes</h3>
+        <p>Interactive Media has probably been the most chaotic subject I've taken since high school chemistry, when my teacher forgot to teach us half the syllabus. Not through any fault of the pedagogues involved, but rather due to my newfound ability to make weird and spectacular mistakes with every submission. </p>
+        <p>But enough complaining, this isn't about that. I want to talk about the process of learning from mistakes. Because that is where I learn the most, where most people learn the most. First of all, the learning experience that made me want to talk here: pushing my changes to the branch that's still being marked. Because I usually step back from my site until the marking process is done, I haven't had problems with breaking the live site before. Now I have, and I've realized that better practice would be to run the site of the most up to date version of the submission branches that I make until such time as I need to start testing the main branch on the live site again.</p>
+        <p>I also learnt a bit more about proper practice with laying out my site and navigating it. Due to my lack of control over the exact way that the site is laid out because of using Githubs pages, I ran into several major problems with the way my site was laid out and navigated. I've ultimately fixed those now though, and I'm glad I took the time to make a proper implementation of site navigation because it should serve me far better in the long run than doing a hack job every time. Which is true in most situations, but weirdly still a lesson I had to learn again. </p>
+        <p>Another long overdue fix I implemented was moving from D3 V3 to V6. I was hesitant to do so, due to the fact that most of the information on the internet is based upon the far more prolific D3 V3, but I was motivated by the increased functionality so I could get my interactive data visualization working. It turned out to be quite an easy transition, except weirdly it broke my axes and made them invisible? I'm not sure why that of all things changed, but regardless I fixed it and even learned how to change axis color if I ever need to in the future.</p>
+       
+
+
+        <!-- links are now links -->
+    </section>
+
     <section class="references">
         <h2>References:</h2>
         <cite>Background Gif source: <a href="https://tenor.com/view/star-galaxy-universe-gif-7187362">Click Here</a></cite>
         <cite>NASA Website: <a href="https://www.nasa.gov/">Click Here</a></cite>
         <cite>Font Source: <a href="https://fonts.google.com/specimen/Ubuntu">Click Here</a></cite>
         <cite>Knaflic: Knaflic, C. (2015) Storytelling with Data: A Data Visualization Guide for Business Professionals. New Jersey: John Wiley & Sons.</cite>
-        <cite>Wood: Wood, T. (2020) How many satellites are operating in space? | World Economic Forum. Available at: https://www.weforum.org/agenda/2020/10/visualizing-easrth-satellites-sapce-spacex/ (Accessed: 14 August 2023).</cite>
+        <cite>Wood: Wood, T. (2020) How many satellites are operating in space? | World Economic Forum. Available at: <a href="https://www.weforum.org/agenda/2020/10/visualizing-easrth-satellites-sapce-spacex/"> https://www.weforum.org/agenda/2020/10/visualizing-easrth-satellites-sapce-spacex/</a> (Accessed: 14 August 2023).</cite>
         <cite>‘Color Blindness Facts & Statistics: Prevalence’ (no date) Color Blindness. Available at: <a href="https://www.colour-blindness.com/general/prevalence/">https://www.colour-blindness.com/general/prevalence/</a> (Accessed: 26 August 2023).</cite>
     </section>
 

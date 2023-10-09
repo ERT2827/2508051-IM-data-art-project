@@ -64,6 +64,11 @@ var designIMG = [{
     img: "../multimedia/mobileFrame.jpg",
     desc: "A small wireframe showing the unique features of the mobile site.",
     alt: "A picture of the mobile home page",
+},{
+    id: 14,
+    img: "../multimedia/Graphs.jpg",
+    desc: "This image summarizes all my graphs in one place.",
+    alt: "A picture of all four graphs",
 },]
 
 

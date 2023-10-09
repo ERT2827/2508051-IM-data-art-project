@@ -16,7 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3.0.0/dist/d3-scale-chromatic.min.js"></script>
+
     
     <link rel="shortcut icon" href="..//multimedia/Logo.png">
 
@@ -49,8 +51,12 @@
     <main>
     <section class="readingSection">
         <h1>How often do you think about space junk?</h1>
-        <p>NASA's SSC tracks <span class="highlightedText" id="liveData"></span> sattelites. That represents less than a percent of the around 11 000<span class="highlightedText"> Payloads </span> currently orbiting the earth (Spacetrack, 2023)</p>
+        <p>NASA's SSC tracks <span class="highlightedText" id="liveData"></span> sattelites. That represents less than five percent of the around 11 000<span class="highlightedText"> Payloads </span> currently orbiting the earth (Spacetrack, 2023)</p>
         <p>Space junk is a building issue for future generations, one that I am using this chance to bring attention to both because it's worth talking about, and also because I believe we need to readjust the way we, as a society, discuss future problems.</p>
+    </section>
+
+    <section class="readingSection">
+        <p><span class="highlightedText">Disclaimer:</span> NASA is currently rejigging their web services, which has led to some outages recently. If the graphs and API are not working, please at least try and check tomorrow because at the time of submission this section of the site was all working.</p>
     </section>
 
     <!-- At this point there would be a graph showing the increase. -->
@@ -63,12 +69,10 @@
         <p>This isn't just a NASA problem either. While they make up most of the launches, other countries like China, France and Japan are also launching sattelites as well. In fact, 2022 was an all time record year for the number of sattelite launches. This can be seen on the graph by how the amount of sattelites launched between 2020 and 2023 is already around half of what was launched during the five years before 2020.</p>
     </section>
 
-    <!-- visualization of sattellites by country -->
-    <h1 class="splashText">Placeholder for interactive graph</h1>
-
+    <section id="fourth" class="graphHolder"></section>
     
     <section class="readingSection">
-        <p>This graph will show the amount of satellites launched by different countries, and this text will reflect on that data.</p>
+        <p>This graph shows the launch and shutdown date of satellites. Active satellites are shown in blue, and inactive ones are shown in black. You can also hover your mouse over the satellites to see their names and status. As you can see from this graph, the majority of satellites are not active, which also reflects the data from space track.</p>
     </section>
 
     <section id="second" class="graphHolder"></section>
@@ -81,6 +85,7 @@
     <section id="third" class="graphHolder"></section>
 
     <section class="readingSection">
+        <p>As you can see from this graph, the majority of satellites last less than twenty years. This means they constantly require replacement, while the inactive satellites contribute to space junk.</p>
         <p>So what's the solution to all this? What's the endgame? For now, we don't know. Satellite recovery and disposal is still extremely expensive, not to mention an easily overlooked issue since it doesn't really effect anything directly yet. But that's the keyword, <span class="highlightedText">yet.</span> This is a brewing issue for humanity, no two ways about it, and that's why I chose to focus on it for this project. Because by keeping problems in mind, it's easier to avoid exacerbating them, and also it means that when it becomes everyones problem, the discussion has already been going for years.</p>
     </section>
 

@@ -215,17 +215,17 @@ async function categorize() {
 
     var date = new Date();
 
-    var yaar = date.getFullYear;
+    var yaar = 2022;
 
     var stillActive = false;
     
     usefulItems.forEach(e => {
         var dt = e.EndTime[1].slice(0, 4)
         
-        if (dt < yaar) {
-            stillActive = false;
-        }else{
+        if (dt > yaar) {
             stillActive = true;
+        }else{
+            stillActive = false;
         }
 
         var buildor = {obsvName: e.Name, startTime: e.StartTime[1].slice(0, 4), endTime: e.EndTime[1].slice(0, 4), active: stillActive}
@@ -277,12 +277,14 @@ function graph1() {
         .range([0, w]);
     svg.append("g")
         .attr("transform", "translate(0," + h + ")")
+        .attr("class", "axisBlack")
         .call(d3.axisBottom(x));
 
     var y = d3.scaleLinear()
         .domain([0, d3.max(data, function(d) { return d.quantity})])
         .range([ h, 0]);
     svg.append("g")
+        .attr("class", "axisBlack")
         .call(d3.axisLeft(y));
 
     svg.append("path")
@@ -341,12 +343,14 @@ function graph2() {
         .range([0, w]);
     svg.append("g")
         .attr("transform", "translate(0," + h + ")")
+        .attr("class", "axisBlack")
         .call(d3.axisBottom(x));
 
     var y = d3.scaleLinear()
         .domain([0, d3.max(data, function(d) { return d.quantity})])
         .range([ h, 0]);
     svg.append("g")
+        .attr("class", "axisBlack")
         .call(d3.axisLeft(y));
 
     svg.append("path")
@@ -382,7 +386,7 @@ function graph2() {
         .attr("y", 6)
         .attr("dy", ".75em")
         .attr("transform", "rotate(-90)")
-        .text("Sattelites launched");
+        .text("Active (Blue), Inactive (Red)");
     
 }
 
@@ -394,8 +398,8 @@ function graph3(){
 
    // set the dimensions and margins of the graph
     var margin = {top: 30, right: 30, bottom: 70, left: 60},
-    width = 460 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+    width = 700 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
 
 // append the svg object to the body of the page
     var svg = d3.select("#third")
@@ -410,6 +414,7 @@ function graph3(){
         .domain(data.map(function(d) { return d.duration; }))
         .padding(0.2);
     svg.append("g")
+        .attr("class", "axisBlack")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x))
         .selectAll("text")
@@ -422,6 +427,7 @@ function graph3(){
     .range([ height, 0]);
     
     svg.append("g")
+    .attr("class", "axisBlack")
     .call(d3.axisLeft(y));
 
     svg.selectAll("mybar")
@@ -432,14 +438,16 @@ function graph3(){
     .attr("y", function(d) { return y(d.quantity); })
     .attr("width", x.bandwidth() - 4)
     .attr("height", function(d) { return height - y(d.quantity); })
-    .attr("fill", "#69b3a2")
+    .attr("fill", "darkblue")
 
     svg.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
+        .attr("font-weight", "bold")
         .attr("x", width)
         .attr("y", height - 6)
         .text("Number of years active.");
+        
 
     svg.append("text")
         .attr("class", "y label")
@@ -456,9 +464,125 @@ function graph3(){
     
 }
 
-async function graph4() {
+function graph4() {
+    launchDecade.forEach(function (d) {
+        d.startTime = d3.timeParse("%Y")(d.startTime)
+        d.endTime = d3.timeParse("%Y")(d.endTime)
+    })
+    
     var data = Object.assign(interactiveData.map(({obsvName, startTime, endTime, active}) => ({obsvName, startTime, endTime, active})));
 
 
     console.log(data);
+
+    // set the dimensions and margins of the graph
+    var margin = {top: 10, right: 30, bottom: 30, left: 60},
+    width = 650 - margin.left - margin.right,
+    height = 650 - margin.top - margin.bottom;
+
+    // append the svg object to the body of the page
+    var svg = d3.select("#fourth")
+    .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform",
+        "translate(" + margin.left + "," + margin.top + ")");
+
+
+    // Add X axis
+    var x = d3.scaleTime()
+        .domain(d3.extent(data, function(d) { return d.startTime; }))
+        .range([0, width]);
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .attr("class", "axisBlack")
+        .call(d3.axisBottom(x));
+
+    // Add Y axis
+    var y = d3.scaleTime()
+        .domain(d3.extent(data, function(d) { return d.endTime; }))
+        .range([height, 0]);
+    svg.append("g")
+    .attr("class", "axisBlack")
+    .call(d3.axisLeft(y));
+
+    // Add dots
+    svg.append('g')
+    .selectAll("dot")
+    .data(data)
+    .enter()
+    .append("circle")
+    .attr("cx", function (d) { return x(d.startTime); } )
+    .attr("cy", function (d) { return y(d.endTime); } )
+    .attr("r", 3)
+    .style('fill', function(d, i) {    
+        if (d.active) {
+            return "blue";
+        } else{
+            return "black";
+        }})
+    .on('mouseover', (event, datum) => showtooltip(datum))
+    .on('mousemove', movetooltip)
+    .on("mouseout", hidetooltip);
+
+
+    svg.append("text")
+        .attr("class", "x label")
+        .attr("text-anchor", "end")
+        .attr("x", width)
+        .attr("y", height - 6)
+        .text("Launch Year");
+
+    svg.append("text")
+        .attr("class", "y label")
+        .attr("text-anchor", "end")
+        .attr("y", 6)
+        .attr("dy", ".75em")
+        .attr("transform", "rotate(-90)")
+        .text("Decommission year");
+
+    //make tooltip'
+    var tooltip = 
+    d3.select('#fourth')
+    .append('div')
+    .style('opacity', 0)
+    .style("width", "150px")
+    .style("height", "200px")
+    .style("border-radius", "5px")
+    .style("padding", "12px")
+    .style("background-color", "#000")
+    .style("color", "#FFF")
+    .style("position", "relative");
+
+    //hide/show tooltip
+    function showtooltip(d) {
+    tooltip
+        .transition()
+        .duration(250)
+        .style('opacity', 1)
+        .style("left", d3.pointer(event)[0])
+        .style("top", d3.pointer(event)[1]);
+
+    var curStatus;
+
+    if(d.active){
+        curStatus = "Active";
+    }else{
+        curStatus = "Inactive";
+    }
+
+    tooltip.html('name: ' + d.obsvName + ', status: ' + curStatus);
+    console.log('name: ' + d.obsvName + ', status: ' + d.active);
+    }
+
+    function movetooltip(){
+    tooltip
+    .style("left", d3.pointer(event)[0])
+    .style("top", d3.pointer(event)[1]);
+    }
+
+    function hidetooltip() {
+    tooltip.style("opacity", 0);
+}
 }
