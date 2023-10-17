@@ -16,6 +16,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+
     <link rel="shortcut icon" href="../multimedia/Logo.png">
 
 </head>
@@ -46,15 +48,19 @@
 
     <!-- main content -->
     <main>
-    <h1 class="splashText">Coming soon!</h1>
 
-    <section class="APIDemo">
-        <h2>But for now, have the astronomical picture of the day</h2>
+    <section class="artSection" id="domain">
 
-        <h3 id="title"></h3>
-        <h4>Date: <span id="date"></span></h4>
+    </section>
+
+    <section class="APIDisplay">
         <img id="pic" src="" alt="NASA Picture Of The Day" width="100%">
-        <p id="explanation"></p>
+        <article class="vertSection">
+            <h3 id="title"></h3>
+            <h4>Date: <span id="date"></span></h4>
+            <p id="explanation"></p>
+        </article>
+        
     </section>
 
 
@@ -66,5 +72,6 @@
 
     <script src="../Java/navigationTools.js"></script>
     <script src="../Java/APIcaller.js"></script>
+    <script src="../Java/artPiece.js"></script>
 </body>
 </html>

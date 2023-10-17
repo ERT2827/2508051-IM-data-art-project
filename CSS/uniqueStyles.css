@@ -86,19 +86,44 @@ figcaption {
     font-size: 0.9rem;
 }
 
-  .APIDemo{
-    padding: 0 10vw 1rem;
+/* Data Art */
+
+    .artSection{
+        width: 100vw;
+        height: auto;
+        margin-top: 10vh;
+        padding-top: 6rem;
+        background-color: whitesmoke;
+        align-items: center;
+    }
+
+  .APIDisplay{
+    margin: 1rem 10vw 1rem;
+    display: flex;
+    flex-direction: row;
+    }
+
+.APIDisplay img{
+    width: 40vw;
+    height: auto;
+    border-radius: 10px;
 }
 
-.APIDemo h3{
+.vertSection{
+    flex-direction: column;
+    margin-left: 2rem;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+
+.vertSection p{
+    color: black;
+}
+
+.vertSection h3{
     padding-top: 2rem;
     font-size: 1.6rem;
-}
-
-.APIDemo img{
-    width: 80vw;
-    height: auto;
-    padding-bottom: 1rem;
+    color: black;
 }
 
 /* blog post stuff */
@@ -248,6 +273,25 @@ figcaption {
     align-items: center;
 }
 
+.arrow {
+    border-color:transparent;
+    border-style:solid;
+    border-width:0 2em;
+    display:block;
+    height:0;
+    margin:10em auto;
+    opacity:0.4;
+    text-indent:-9999px;
+    transform-origin: 50% 50%;
+    width:0;
+}
+
+.down {
+    animation: downarrow 0.6s infinite alternate ease-in-out;
+    border-top:2em solid whitesmoke;
+}
+
+
 /* Visualization related things */
 
 .graphHolder{
@@ -277,23 +321,6 @@ figcaption {
     100% { -webkit-transform: translateY(0.4em); opacity: 0.9 }
 }
 
-.arrow {
-    border-color:transparent;
-    border-style:solid;
-    border-width:0 2em;
-    display:block;
-    height:0;
-    margin:10em auto;
-    opacity:0.4;
-    text-indent:-9999px;
-    transform-origin: 50% 50%;
-    width:0;
-}
-
-.down {
-    animation: downarrow 0.6s infinite alternate ease-in-out;
-    border-top:2em solid whitesmoke;
-}
 
 
 @media only screen and (max-width: 830px){
