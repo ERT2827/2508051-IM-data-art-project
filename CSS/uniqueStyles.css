@@ -97,17 +97,27 @@ figcaption {
         align-items: center;
     }
 
-  .APIDisplay{
+    .APIDisplay{
     margin: 1rem 10vw 1rem;
     display: flex;
     flex-direction: row;
+    visibility: hidden;
     }
 
-.APIDisplay img{
-    width: 40vw;
-    height: auto;
-    border-radius: 10px;
-}
+    .APIDisplay img{
+        width: 40vw;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .APIDisplay h4{
+        color: black;
+        padding: 0 2rem;
+    }
+
+    .APIDisplay time{
+        color: black;
+    }
 
 .vertSection{
     flex-direction: column;
@@ -118,10 +128,11 @@ figcaption {
 
 .vertSection p{
     color: black;
+    padding: 1rem;
 }
 
 .vertSection h3{
-    padding-top: 2rem;
+    padding: 2rem;
     font-size: 1.6rem;
     color: black;
 }
@@ -169,7 +180,7 @@ figcaption {
 
 .blogPost img{
     align-self: center;
-    max-width: 60vw;
+    max-width: 35vw;
     height: auto;
 }
 
@@ -321,6 +332,28 @@ figcaption {
     100% { -webkit-transform: translateY(0.4em); opacity: 0.9 }
 }
 
+/* Date selector */
+
+.dateSelect{
+    margin: 8rem 30vw 0;
+    background-color: whitesmoke;
+    padding: 2rem;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dateSelect label{
+    color: black;
+    font-size: 2.2rem;
+}
+
+.dateSelect input{
+    color: black;
+    font-size: 2.2rem;
+}
+
 
 
 @media only screen and (max-width: 830px){
@@ -359,6 +392,10 @@ figcaption {
     
     .references a{
         background-color: rgba(0, 0, 0, 0);
+    }
+
+    .quickSelect{
+        display: block;
     }
 
     /* .arrowContainer{

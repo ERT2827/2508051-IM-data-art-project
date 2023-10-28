@@ -49,15 +49,21 @@
     <!-- main content -->
     <main>
 
+    <form class="dateSelect">
+        <label for="datepiceker"> Pick a date:
+            <input id="datepicker" type="date" min="" max="" > 
+        </label>
+    </form>
+
     <section class="artSection" id="domain">
 
     </section>
 
-    <section class="APIDisplay">
+    <section class="APIDisplay" id="displayArea">
         <img id="pic" src="" alt="NASA Picture Of The Day" width="100%">
         <article class="vertSection">
             <h3 id="title"></h3>
-            <h4>Date: <span id="date"></span></h4>
+            <h4>Date: <time datetime="" id="date"></time></h4>
             <p id="explanation"></p>
         </article>
         
@@ -70,8 +76,15 @@
         <nav>↑</nav>
     </a>
 
+    <footer class="foote">
+        <img src="../multimedia/Helmet.png" alt="An astronaut's helmet">
+        <p>This site couldn't exist without the hard work of the scientists at NASA. Go check out their site for much more amazing space information at this link here:</p>
+        <a href="https://www.nasa.gov/">Space is so COOL!!!</a>
+    </footer>
+
+
     <script src="../Java/navigationTools.js"></script>
-    <script src="../Java/APIcaller.js"></script>
+    <!-- <script src="../Java/APIcaller.js"></script> -->
     <script src="../Java/artPiece.js"></script>
 </body>
 </html>

@@ -55,6 +55,8 @@
         <a href="#closeRead">Close Reading</a>
         <a href="#criticalRef">Critical Reflection</a>
         <a href="#closeRead2">Close Reading 2</a>
+        <a href="#artReflect">Art Reflection</a>
+        <a href="#cvReflect">CV Reflection</a>
     </section>
 
     <section class="blogPost" id="closeRead">
@@ -152,6 +154,40 @@
 
 
     </section>
+
+    <section class="blogPost" id="artReflect">
+        <h2>Blog Essay 4: Critical Reflection – Proposed Data Art Piece.</h2>
+        <h3>What nearly was:</h3>
+        <img src="../multimedia/Basic ideas.jpg" alt="Original site wireframes.">
+        <p>My initial designs for the site. The first idea for my art is the fifth image.</p>
+        <img src="../multimedia/Art2.jpg" alt="Updated art concept.">
+        <p>My second idea for my art piece.</p>
+        <p>The art piece that this blog will focus on is the third and final idea I’ve had for my final data art piece. But before I discuss that, I want to quickly go over the history of the first two ideas because I’d like to show the process that got us to this point. In the original, I wanted to have a globe that was painted over by trails drawn behind satellites. In the second, I planned to make a sky and blot it out using red dots drawn at the location of space objects. Both ideas were supposed to tie into the site’s overall theme of space junk awareness, because I wanted to make something that could raise awareness along with being pretty. </p>
+        <p>I ended up scrapping both these ideas. Why? Because they weren’t possible within the constraints of my knowledge, D3 and the API’s I had available. D3 at it’s most basic is finnicky and I’m still only starting to understand it, and this certainly wouldn’t be D3 at its most basic. It would have required extremely custom solutions, which I would have little to no help creating. Still, I wasn’t ready to quit at that point, since I’m willing to take on a challenge if I think it’ll make me a better designer. What made me switch my plan was instead when I started looking at implementation, which I realized would be near impossible with the SSC API. So, ultimately, I was forced to move onto a new idea, and this is what I came up with.</p>
+        <h3>Something Pretty:</h3>
+        <img src="../multimedia/Essay4images/Artframe.jpg" alt="Concept art of intended final data art piece.">
+        <p>Current Basic implementation.</p>
+        <img src="../multimedia/Essay4images/LiveVersion.png" alt="An image of a prior iteration of the data art piece.">
+        <p>Planned final implementation.</p>
+        <p>My new idea revolves around the NASA Astronomical Picture of the Day (APOD) API. To start off, I want to discuss what I have so far. I’ve managed to get a basic D3.Force Diagram going, and I have placeholders for the full sized image and the description, which will be accessible by clicking on the images in the force diagram. These are already being fed from the API, which I’ve got set up in a test configuration. The art and the explanation are deliberately being kept separate from each other to keep the actual art decluttered, create a hierarchy and decrease cognitive load (Knaflic, 2015). I’ve even implemented a function to make it so that the bubbles are slightly different sizes, which should make the art more visually appealing since uniformity is only enjoyable when it is a feature (Hogarth, 1753). That said, I do feel I need to scale this feature back a bit, because right now it’s too distracting and makes it so that some bubbles seem more important when in reality they are all the same level of importance.</p>
+        <p>Now I want to talk about my plans. I want to create a collection of bubbles, around 25, each with a random APOD displayed. But I want to add a bit more spice to that, so I plan on adding a few more features. Firstly, I want to make it so that the bubbles resize when the cursor is over them, for visual flair and to let the user play with physics a bit. Secondly, I want to give the user the ability to add their own bubbles by selecting a date from a drop-down menu, which will add a new bubble in and regenerate some of the old ones. This should make the art feel far more interactive, both because it’ll let the user control the content and because it adds another way to play with physics. Finally, I want to add the function to let users click on bubbles to see the full image and the explanation, which helps for learning and also increases the depth of engagement for users by allowing them to seek context when they want.</p>
+        <p>The biggest motivator behind this change in direction from my original ideas is the move to the APOD API, because when it comes to building a visually appealing piece of data visualization (which is my goal here) the SSC API is just not the right tool for the job. It’s extremely niche, with a small set of extremely detailed data that is not intended to be displayed in a way that is readable to the average person. The APOD on the other hand consists of a massive set of around ten thousand data points, thanks to daily updates since 1995 (NASA, 2023), all of which are designed to be aesthetically pleasing and human readable. In short, I’m choosing to use the better tool for the job, because I’d rather have something extremely solid than something that just barely passes the bar, even if it means I must kill my darling somewhat.</p>
+        <p>To end off, I want to focus on a key word throughout this blog/essay: interaction. Because as Li explains, data visualization is “the transformation of data into information” (Li, 2020: 19) and by making information interactive and letting users metaphorically turn it over in their hands, it increases the impact far more than just seeing all the raw information laid out in front of them. This is important to me, because while this art piece has ended up deviating from my initial goal of starting discourse about space junk, I still want it to be educational, and by showing the user pretty things and giving them the tools to learn more about them, I feel as though I can somewhat keep that goal of education alive.</p>
+        <h3>References:</h3>
+        <cite>Hogarth, W. (1753) Chapter 3: Uniformity, Obelisk Art History. Available at: <a href="https://arthistoryproject.com/artists/william-hogarth/the-analysis-of-beauty/chapter-2-uniformity/">https://arthistoryproject.com/artists/william-hogarth/the-analysis-of-beauty/chapter-2-uniformity/</a>  (Accessed: 23 October 2023).</cite>
+        <cite>Knaflic, C. (2015) Storytelling with Data: A Data Visualization Guide for Business Professionals. 1st edn. Wiley.</cite>
+        <cite>Li, Q. (2020) ‘Overview of Data Visualization’, in Li, Q., Embodying Data. Singapore: Springer Singapore, pp. 17–47. Available at: <a href="https://doi.org/10.1007/978-981-15-5069-0_2.">https://doi.org/10.1007/978-981-15-5069-0_2.</a> </cite>
+        <cite>NASA (2023) Astronomy Picture of the Day. Available at: <a href="https://apod.nasa.gov/apod/astropix.html">https://apod.nasa.gov/apod/astropix.html</a>  (Accessed: 23 October 2023).</cite>
+    </section>
+
+    <section class="blogPost" id="cvReflect">
+        <h2>Personal blog: Using HTML in my own life, and for the future.</h2>
+        <p>As a final footnote on this website and year of Interactive Media, I want to break from the plan a bit and talk about my relationship with HTML. Because while this year has held many, many hardships (mostly involving submitting and D3) I do think I've learnt a lot from them. And I also think what I learnt from them has been extremely valuable.</p>
+        <p>Let's start by looking back: I am very proud of myself for getting my first site from where it started to where it ended. It was a long and very hard road, mostly because of my own errors, but it forced me to improve at a meteoric rate, so I'm grateful for it. In the end, I got a site out of it that looks pretty good, and a reminder of the power of never giving up on your goals. As for the second site, I think it's fine. I am still annoyed that at every step of the way I've had to scale back my ambition because what I want simply isn't realistic, but what can you do? D3 is simultaneously limitless and limiting, especially because of the fact that you have to go at it essentially alone. That last part has been hard, and I've cried more times working with D3 than at almost any other point in my academic career. I know I probably shouldn't say that, but these sites have literal blood, sweat and tears put into them, and I feel as though it's a disservice to the journey if I just say nothing happened along the way. </p>
+        <p>Finally, what's next? Well, I plan on building a CV/Portfolio site for myself during the holidays. Something to keep me busy, and to practice my skills a little more while they're still sharp. I might also teach my sister or some other person I know HTML, because teaching is the best way to truly grasp a topic. After that, I have no more plans. I don't plan on taking IM to the fourth year level, even if it is useful, because it's not the thing I'm most passionate about, so I guess the next time I'll use these skills is hopefully at a professional level. Somewhere, somehow, I'll find a way. </p>
+        <p>But until then, so long and thanks for all the fish.</p>
+    </section>
+
 
     </main>
 
