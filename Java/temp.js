@@ -1,6 +1,6 @@
 //I transferred all my workings here to clean up the live code,
 //please ignore any mistakes here since it isn't actually used anywhere.
-
+//I'm only keeping this for future reference
 
 var dateInput = document.querySelector("#datepicker");
 var currentDate =new Date().toISOString().slice(0, 10);
@@ -10,7 +10,7 @@ dateInput.min="1995-06-16";
 var Pictures = [];
 
 
-//SVG
+    //SVG
     var height = window.innerHeight,
     width = window.innerWidth;
 
@@ -22,7 +22,7 @@ var Pictures = [];
        .attr("height", height)
        .attr("id", "displaySpace");
 
-    var defs = svg.append("defs");
+
 
 function generateRandomDate(from, to) {
     return new Date(
@@ -76,11 +76,9 @@ async function createArray() {
     return(Pictures);
 }
 
-async function createArt(){
+async function createArt(data){
     var rScale = d3.scaleSqrt().domain([19000000, 21000000]).range([55, 70]);
-    
-    
-    var data = await createArray();
+
 
     //prune values
    for (var i = 0; i < data.length; i++) {
@@ -108,6 +106,7 @@ async function createArt(){
 
     //DRAW CIRCLES
     function drawCircles(data) {
+    var defs = svg.append("defs");
     defs
         .selectAll()
         .data(data)

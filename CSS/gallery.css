@@ -9,9 +9,9 @@
     margin: 100px auto 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 60px;
     background-color: rgba(96, 96, 96, 0.8);
-    padding: 5rem 0;
+    padding: 4rem 5rem;
 }
 
 .image-Gallery img{

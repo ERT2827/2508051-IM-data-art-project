@@ -58,7 +58,7 @@
     </section>
     
     <section class="readingSection">
-        <h3>Initial design and goals</h3>
+        <h2>Initial design and goals</h2>
         <p>Unlike my previous site, where I was largely operating blind the whole time, I now have a fair bit more experience making websites. With that in mind, here are some of my main goals for this project:</p>
         <ul>
             <li>Start stronger: I had touched HTML briefly once in my life before this year. Now I have a semesters worth of experience to work from. So that means keeping up the same standard, and improving on it as I master new skills.</li>
@@ -72,9 +72,10 @@
     </section>
 
     <section class="readingSection">
-        <h3>Style Guide:</h3>
+        <h2>Style Guide:</h2>
         <h3>Core principles:</h3>
-        <p>My main guiding statement for this project as I go forwards is this: <span class="highlightedText">Capture the wonder of space.</span></p>
+        <p>My main guiding statement for this project as I go forwards is this: </p>
+        <p class="highlightedText">Capture the wonder of space.</p>
         <p>This immediately gives me a solid starting point for my design, since there are a great many websites that focus on space out there already, and because of that I'm able to draw upon them for reference when building my own site. The most obvious starting point amidst these is the National Aeronautics and Space Administration's own website. </p>
         <img src="../multimedia\NASAPage.png" alt="A picture of the NASA website">
         <p>NASA has a good website, although I need to acknowledge that its focus is very different to mine. The big difference is that NASA has an extremely broad set of focuses, from sattelites to Space Shuttles to the environment, while my site is purely going to be concerned with the movements of sattelites. This narrows my scope somewhat, so I will narrow my scope and adjust my parameters accordingly.</p>
@@ -90,7 +91,7 @@
     </section>
 
     <section class="readingSection">
-        <h3>So... What am I doing for my art piece?</h3>
+        <h2>So... What am I doing for my art piece?</h2>
         <p>My initial plan for my art piece was to make a small program that painted the sky with pretty colors and call it a day there, but now I'm not so sure. The goal of this website is slowly crystalizing into something more firm, and part of that is definitely that I want to take an awareness approach to my art piece. As the home page says, there are nearly 6000 sattelites in the sky, and only around half of those work (Wood, 2020). Space junk is high on the list of future problems for mankind, and so I'd like to raise a bit of awareness about it with the hopes of causing at least one interesting conversation.</p>
         <img src="../multimedia/Art2.jpg" alt="Stars being blotted out by red">
         <p>So my idea for right now is to build a 3d scene where the user can look at the stars but they're blocked by satellites, which will cast these large red dots. Maybe there'll also be an option to turn the sattelites off as well, we'll see. I might also use <a href="https://solarsystem.nasa.gov/resources/2393/earth-3d-model/">this</a> model for something, but so far it's all just ideas and figuring out how I can best use the API to create something meaningful.</p>
@@ -111,7 +112,7 @@
         <p>Every time I tried to call the API I got an error back saying that I had the wrong CORS type. And I spent a long time trying to solve this error, doing everything in my power, until I eventually ran out of documentation online and resorted to emailing the people who run the site. I wish I had have done that earlier, because I got a short, polite email back explaining their API can't be called using Javascript, so I should come up with another solution. Which I might still, but likely won't since server hosting in the ways needed to bypass this issue is a little out of the range of my current assignment. Even if it would be cool to host this site on my own server.</p>
         <p>So the real question is: what did I learn? Fortunately, it was a lot. I went into this ordeal understanding nothing about APIs, and have left it with a more solid understanding about how APIS and javascript work. I also learnt that not everything is the users fault, even if most things are. The reason why I spent so much time on this distraction was because I assumed that I was somehow the problem because I was a dumb baby who didn't understand API calls. And while that may mostly be true, I have also been reminded once again why when you assume you make an ass out of u and me.</p>
         <p>So that's my story. Of course I'm not putting this here for sympathy or anything, but rather because I think I've learnt some valuable lessons from this experience and it'd be a waste not to use them.</p>
-        <h3>Style Guide (updated):</h3>
+        <h2>Style Guide (updated):</h2>
         <p>My design for this website is still heavily inspired and driven by NASA's own.</p>
         <img src="../multimedia/NASAPage.png" alt="A picture of the NASA website">
         <p>I'm using a clean and minimalist approach, accentuated by an animated background. The goal is to capture the feel of space, specifically through the lens of the National Aeronautics and Space Administration and the very well established design language that they have built over their many, many years of operation.</p>
@@ -136,7 +137,7 @@
     </section>
 
     <section class="readingSection">
-        <h3>Graph planning.</h3>
+        <h2>Graph planning.</h2>
         <p>The main focus of the past two iterations of this site has been the graphs. This section will discuss those graphs in depth</p>
         <h3>Interactive Graph:</h3>
         <img src="../multimedia/interactiveGraph.png" alt="A picture of the interacte graph">
@@ -160,14 +161,31 @@
         <!-- links are now links -->
     </section>
 
+    <section class="readingSection">
+        <h2>Design: Submission 4</h2>
+    </section>
+
+    <section class="readingSection">
+        <h3>Has anything changed since last time?</h3>
+        <img src="../multimedia/homeUpdated.png" alt="An updated wireframe of the home page.">
+        <p>There's been the regular behind the scenes changes, and I reworked my home page a little to include links to the now complete art and learning pages for the sake of improving site flow and directing users towards the parts of the site I want them to see (as seen in this new wireframe), but other than that it's just mainly been a lot of work on the data art project.</p>
+        <h3>The Data Art Project:</h3>
+        <img src="../multimedia/Essay4images/Artframe.jpg" alt="Wireframe of the art piece">
+        <p>D3 has proved to be the most difficult tool to work with I think in the whole of my university career, owing mainly to the difficulty of finding information about it online. You may say it's just a google search away, but the problem is that A: turns up solutions to other people's problems, not your own specific implementation, and B: is often outdated information, meaning that if you are using D3 V7 as recommended, finding relevant information becomes far harder.</p>
+        <p>But that's enough of a rant, what about actually designing the data art piece? Well this has already been about at length in blog post 4, but I'll summarize the key points here: Basically, it's a case of vision butting up against reality. I had a grand vision for what I wanted, but as I came to understand my tools better (even if not fully) I realized that what I wanted simply wasn't possible, and had to pivot to something new.</p>
+        <p>That being said, I am quite happy with what resulted from the process. I have a fun, interactive data art piece that includes all the features I said it would (against all odds) and is endlessly interesting thanks to the sheer quality of the pictures NASA chooses for its APOD.</p>
+        <p>In other words, I do think things have worked out well, and I'm glad that I was able to turn out something solid even if I did have to struggle a lot to get to that point.</p>
+    </section>
+
     <section class="references">
         <h2>References:</h2>
         <cite>Background Gif source: <a href="https://tenor.com/view/star-galaxy-universe-gif-7187362">Click Here</a></cite>
-        <cite>NASA Website: <a href="https://www.nasa.gov/">Click Here</a></cite>
+        <cite>‘Color Blindness Facts & Statistics: Prevalence’ (no date) Color Blindness. Available at: <a href="https://www.colour-blindness.com/general/prevalence/">https://www.colour-blindness.com/general/prevalence/</a> (Accessed: 26 August 2023).</cite>
         <cite>Font Source: <a href="https://fonts.google.com/specimen/Ubuntu">Click Here</a></cite>
         <cite>Knaflic: Knaflic, C. (2015) Storytelling with Data: A Data Visualization Guide for Business Professionals. New Jersey: John Wiley & Sons.</cite>
+        <cite>NASA Website: <a href="https://www.nasa.gov/">Click Here</a></cite>
+        <cite>NASA (2023) Astronomy Picture of the Day. Available at: <a href="https://apod.nasa.gov/apod/astropix.html">https://apod.nasa.gov/apod/astropix.html</a>  (Accessed: 23 October 2023).</cite>
         <cite>Wood: Wood, T. (2020) How many satellites are operating in space? | World Economic Forum. Available at: <a href="https://www.weforum.org/agenda/2020/10/visualizing-easrth-satellites-sapce-spacex/"> https://www.weforum.org/agenda/2020/10/visualizing-easrth-satellites-sapce-spacex/</a> (Accessed: 14 August 2023).</cite>
-        <cite>‘Color Blindness Facts & Statistics: Prevalence’ (no date) Color Blindness. Available at: <a href="https://www.colour-blindness.com/general/prevalence/">https://www.colour-blindness.com/general/prevalence/</a> (Accessed: 26 August 2023).</cite>
     </section>
 
     <section>

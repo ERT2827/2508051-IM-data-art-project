@@ -37,7 +37,7 @@ var designIMG = [{
 },{
     id: 8,
     img: "../multimedia/Art2.jpg",
-    desc: "A poor 2D representation of what I ultimately want to make in 3d for my final art piece.",
+    desc: "A 2D representation of what I ultimately want to make in 3d for my final art piece.",
     alt: "Stars being blotted out by red",
 },{
     id: 9,
@@ -69,6 +69,16 @@ var designIMG = [{
     img: "../multimedia/Graphs.jpg",
     desc: "This image summarizes all my graphs in one place.",
     alt: "A picture of all four graphs",
+},{
+    id: 15,
+    img: "../multimedia/homeUpdated.png",
+    desc: "An updated wireframe of my home page discussing why I changed it.",
+    alt: "A wireframe of the updated home page",
+},{
+    id: 16,
+    img: "../multimedia/Essay4images/Artframe.jpg",
+    desc: "A wireframe that I used to plan my final iteration of the art piece.",
+    alt: "A wireframe of the final art piece",
 },]
 
 
@@ -86,18 +96,9 @@ function CloseFull(){
 }
 
 //Gallery populator
-
-var url = window.location.pathname;
-var fileName = url.substring(url.lastIndexOf('/')+1);
-
 var sectionCenter = document.querySelector(".image-Gallery");
 
-if(fileName == "design.html"){
-    displayGallery(designIMG);
-}else if(fileName == "portfolio.html"){
-    displayGallery(portfolioIMG)
-}
-
+displayGallery(designIMG);
 
 function displayGallery(galleryItems){
     var displayGallery = galleryItems.map(function (galleryItem){

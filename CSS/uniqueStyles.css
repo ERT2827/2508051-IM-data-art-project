@@ -36,20 +36,20 @@
 
 .readingSection h2{
     font-size: 3rem;
-    padding: 1rem 2rem;
+    padding: 0.8rem 2rem;
     background-color: whitesmoke;
     color: black;
 }
 
 .readingSection h3{
     font-size: 2rem;
-    padding: 1rem 2rem;
+    padding: 0.6rem 2rem;
     background-color: whitesmoke;
     color: black;
 }
 
 .readingSection p{
-    padding: 1rem 1.5rem;
+    padding: 0.6rem 1.5rem;
     background-color: whitesmoke;
     color: black;
     font-size: 1.2rem;
@@ -126,15 +126,36 @@ figcaption {
     border-radius: 10px;
 }
 
+.vertSection h2{
+    padding: 2rem 2rem 0;
+    font-size: 2rem;
+    color: black;
+}
+
 .vertSection p{
     color: black;
-    padding: 1rem;
+    padding: 1rem 1rem 3rem;
+    font-size: 1.2rem;
 }
 
 .vertSection h3{
     padding: 2rem;
     font-size: 1.6rem;
     color: black;
+}
+
+.vertSection a{
+    border: 2px solid black;
+    background-color: whitesmoke;
+    margin-left: 2rem;
+    padding: 0.6rem;
+    color: black;
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.recommendations li{
+    font-size: 1.8rem;
 }
 
 /* blog post stuff */
@@ -303,6 +324,23 @@ figcaption {
 }
 
 
+/* The unique style for the home page */
+
+.homeRow{
+    display: flex;
+    flex-direction: row;
+    background-color: whitesmoke;
+    color: black;
+    margin: 15vh 10vw;
+    border-radius: 15px;
+}
+
+.homeRow img{
+    max-width: 40vw;
+    height: auto;
+    margin: 4rem 6rem;
+}
+
 /* Visualization related things */
 
 .graphHolder{
@@ -396,6 +434,10 @@ figcaption {
 
     .quickSelect{
         display: block;
+    }
+
+    .homeRow{
+        flex-direction: column;
     }
 
     /* .arrowContainer{

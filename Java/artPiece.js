@@ -3,7 +3,7 @@ var currentDate =new Date().toISOString().slice(0, 10);
 dateInput.max=currentDate;
 dateInput.min="1995-06-16";
 
-var Pictures = [];
+var pictures = [];
 
 
 //SVG
@@ -58,16 +58,16 @@ async function createArray() {
         dateInput = dateInput.toISOString().slice(0, 10);
         var newDate = "&date="+dateInput+"&";
 
-        var tempfile = await getData(newDate);
+        var tempFile = await getData(newDate);
 
-        Pictures.push(tempfile);
+        pictures.push(tempFile);
 
         I += 1;
     }
 
-    // console.log(Pictures);
+    // console.log(pictures);
 
-    return(Pictures);
+    return(pictures);
 }
 
 function createArt(data){
@@ -180,11 +180,11 @@ async function initialize() {
 }
 
 async function addBall(date) {
-    var tempfile = await getData(date);
+    var tempFile = await getData(date);
 
-    Pictures.push(tempfile);
+    pictures.push(tempFile);
 
-    createArt(Pictures);
+    createArt(pictures);
 }
 
 initialize();

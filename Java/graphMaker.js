@@ -25,6 +25,42 @@ var timeActive = [
 
 var interactiveData = [];
 
+//Create the SVGs. I'm doing it here in hopes of making it more
+//apparent that the site is loading.
+
+// set the dimensions and margins of the graph
+var margin = {top: 30, right: 30, bottom: 70, left: 60},
+width = 700 - margin.left - margin.right,
+height = 700 - margin.top - margin.bottom;
+
+var svg1 = d3.select("#first")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+    	.append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg2 = d3.select("#second")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg3 = d3.select("#third")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+var svg4 = d3.select("#fourth")
+        .append("svg")
+        .attr("width", width + margin.left + margin.right)
+        .attr("height", height + margin.top + margin.bottom)
+        .append("g")
+        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
 function populateDates(dateArray) {
     var d = 1950;
     
@@ -254,10 +290,6 @@ categorize();
 //GRAPH 1
 
 function graph1() {      
-    var w=700;
-    var h=550;
-
-    var margin = {top: 10, right: 10, bottom: 30, left: 60};
 
     launchDecade.forEach(function (d) {
         d.date = d3.timeParse("%Y")(d.date)
@@ -265,29 +297,24 @@ function graph1() {
 
     var data = Object.assign(launchDecade.map(({date, quantity}) => ({date, quantity})), {y: "Quantity"})
 
-    var svg = d3.select("#first")
-        .append("svg")
-        .attr("width", w + margin.left + margin.right)
-        .attr("height", h + margin.top + margin.bottom)
-    	.append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
 
     var x = d3.scaleTime()
         .domain(d3.extent(data, function(d) { return d.date; }))
-        .range([0, w]);
-    svg.append("g")
-        .attr("transform", "translate(0," + h + ")")
+        .range([0, width]);
+    svg1.append("g")
+        .attr("transform", "translate(0," + height   + ")")
         .attr("class", "axisBlack")
         .call(d3.axisBottom(x));
 
     var y = d3.scaleLinear()
         .domain([0, d3.max(data, function(d) { return d.quantity})])
-        .range([ h, 0]);
-    svg.append("g")
+        .range([ height, 0]);
+    svg1.append("g")
         .attr("class", "axisBlack")
         .call(d3.axisLeft(y));
 
-    svg.append("path")
+    svg1.append("path")
         .datum(launchDecade)
         .attr("fill", "none")
         .attr("stroke", "blue")
@@ -297,14 +324,14 @@ function graph1() {
         .y(function(d) { return y(d.quantity) })
         )
 
-    svg.append("text")
+    svg1.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
-        .attr("x", w)
-        .attr("y", h - 6)
+        .attr("x", width)
+        .attr("y", height - 6)
         .text("Year (in half decades)");
 
-    svg.append("text")
+    svg1.append("text")
         .attr("class", "y label")
         .attr("text-anchor", "end")
         .attr("y", 6)
@@ -315,10 +342,7 @@ function graph1() {
 }
 
 function graph2() {
-    var w=700;
-    var h=550;
 
-    var margin = {top: 10, right: 10, bottom: 30, left: 60};
 
     activeRatio.forEach(function (d) {
             d.date = d3.timeParse("%Y")(d.date)
@@ -331,29 +355,24 @@ function graph2() {
 
     var inactiveArr = data.slice(data.length / 2, data.length)
 
-    var svg = d3.select("#second")
-        .append("svg")
-        .attr("width", w + margin.left + margin.right)
-        .attr("height", h + margin.top + margin.bottom)
-    	.append("g")
-        .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    
 
     var x = d3.scaleTime()
         .domain(d3.extent(data, function(d) { return d.date; }))
-        .range([0, w]);
-    svg.append("g")
-        .attr("transform", "translate(0," + h + ")")
+        .range([0, width]);
+    svg2.append("g")
+        .attr("transform", "translate(0," + height + ")")
         .attr("class", "axisBlack")
         .call(d3.axisBottom(x));
 
     var y = d3.scaleLinear()
         .domain([0, d3.max(data, function(d) { return d.quantity})])
-        .range([ h, 0]);
-    svg.append("g")
+        .range([ height, 0]);
+    svg2.append("g")
         .attr("class", "axisBlack")
         .call(d3.axisLeft(y));
 
-    svg.append("path")
+    svg2.append("path")
         .datum(activeArr)
         .attr("fill", "none")
         .attr("stroke", "blue")
@@ -363,7 +382,7 @@ function graph2() {
         .y(function(d) { return y(d.quantity) })
         )
 
-    svg.append("path")
+    svg2.append("path")
         .datum(inactiveArr)
         .attr("fill", "none")
         .attr("stroke", "red")
@@ -373,14 +392,14 @@ function graph2() {
         .y(function(d) { return y(d.quantity) })
         )
 
-    svg.append("text")
+    svg2.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
-        .attr("x", w)
-        .attr("y", h - 6)
+        .attr("x", width)
+        .attr("y", height - 6)
         .text("Year (in half decades)");
 
-    svg.append("text")
+    svg2.append("text")
         .attr("class", "y label")
         .attr("text-anchor", "end")
         .attr("y", 6)
@@ -394,26 +413,13 @@ function graph3(){
 
     var data = Object.assign(timeActive.map(({duration, quantity}) => ({duration, quantity})), {y: "Quantity"})
 
-    console.log(data);
-
-   // set the dimensions and margins of the graph
-    var margin = {top: 30, right: 30, bottom: 70, left: 60},
-    width = 700 - margin.left - margin.right,
-    height = 700 - margin.top - margin.bottom;
-
-// append the svg object to the body of the page
-    var svg = d3.select("#third")
-    .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+    console.log(data);    
 
     var x = d3.scaleBand()
         .range([ 0, width ])
         .domain(data.map(function(d) { return d.duration; }))
         .padding(0.2);
-    svg.append("g")
+    svg3.append("g")
         .attr("class", "axisBlack")
         .attr("transform", "translate(0," + height + ")")
         .call(d3.axisBottom(x))
@@ -426,11 +432,11 @@ function graph3(){
     .domain([0, 40])
     .range([ height, 0]);
     
-    svg.append("g")
+    svg3.append("g")
     .attr("class", "axisBlack")
     .call(d3.axisLeft(y));
 
-    svg.selectAll("mybar")
+    svg3.selectAll("mybar")
     .data(data)
     .enter()
     .append("rect")
@@ -440,7 +446,7 @@ function graph3(){
     .attr("height", function(d) { return height - y(d.quantity); })
     .attr("fill", "darkblue")
 
-    svg.append("text")
+    svg3.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
         .attr("font-weight", "bold")
@@ -449,7 +455,7 @@ function graph3(){
         .text("Number of years active.");
         
 
-    svg.append("text")
+    svg3.append("text")
         .attr("class", "y label")
         .attr("text-anchor", "end")
         .attr("y", 6)
@@ -457,7 +463,7 @@ function graph3(){
         .attr("transform", "rotate(-90)")
         .text("Quantity");
 
-    svg.append('text')
+    svg3.append('text')
         .attr('class', 'title')
         .attr('y', -10)
         .text("Active time of Satellites.");
@@ -475,26 +481,14 @@ function graph4() {
 
     console.log(data);
 
-    // set the dimensions and margins of the graph
-    var margin = {top: 10, right: 30, bottom: 30, left: 60},
-    width = 650 - margin.left - margin.right,
-    height = 650 - margin.top - margin.bottom;
-
-    // append the svg object to the body of the page
-    var svg = d3.select("#fourth")
-    .append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+    
 
 
     // Add X axis
     var x = d3.scaleTime()
         .domain(d3.extent(data, function(d) { return d.startTime; }))
         .range([0, width]);
-    svg.append("g")
+    svg4.append("g")
         .attr("transform", "translate(0," + height + ")")
         .attr("class", "axisBlack")
         .call(d3.axisBottom(x));
@@ -503,12 +497,12 @@ function graph4() {
     var y = d3.scaleTime()
         .domain(d3.extent(data, function(d) { return d.endTime; }))
         .range([height, 0]);
-    svg.append("g")
+    svg4.append("g")
     .attr("class", "axisBlack")
     .call(d3.axisLeft(y));
 
     // Add dots
-    svg.append('g')
+    svg4.append('g')
     .selectAll("dot")
     .data(data)
     .enter()
@@ -527,14 +521,14 @@ function graph4() {
     .on("mouseout", hidetooltip);
 
 
-    svg.append("text")
+    svg4.append("text")
         .attr("class", "x label")
         .attr("text-anchor", "end")
         .attr("x", width)
         .attr("y", height - 6)
         .text("Launch Year");
 
-    svg.append("text")
+    svg4.append("text")
         .attr("class", "y label")
         .attr("text-anchor", "end")
         .attr("y", 6)

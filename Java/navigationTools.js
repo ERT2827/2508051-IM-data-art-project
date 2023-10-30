@@ -111,7 +111,11 @@ function displayTopBar(pageses){
 var sideBarArea = document.getElementById("sideChick");
 
 if(sideBarArea != null){
-    displaysideBar(pages);
+    if(fileName == "index.html" || fileName == ""){
+        displaysideBar(pagesInd);
+    }else{
+        displaysideBar(pages);
+    }
 }
 
 function displaysideBar(pageses) {
@@ -121,7 +125,7 @@ function displaysideBar(pageses) {
 
     aside.append(nav);
 
-    pageses.pop();
+    // pageses.pop();
 
     var displaysideBar = pageses.map(function (pageses){
         return `<li><a href="${pageses.location}">${pageses.text}</a></li>`;

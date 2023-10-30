@@ -1,3 +1,6 @@
+//This code is now depreciated, please ignore.
+//It is only being kept for the sake of reference
+
 var req1 = new XMLHttpRequest();
 var url1 = "https://api.nasa.gov/planetary/apod?api_key=";
 var api_key = "93Z3SaQ0E6FBtDpLhnaZUcLhi5vPX2fyGg1zs2MJ";
