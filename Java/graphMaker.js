@@ -30,7 +30,7 @@ var interactiveData = [];
 
 // set the dimensions and margins of the graph
 var margin = {top: 30, right: 30, bottom: 70, left: 60},
-width = 700 - margin.left - margin.right,
+width = width = window.innerWidth * 0.6,
 height = 700 - margin.top - margin.bottom;
 
 var svg1 = d3.select("#first")

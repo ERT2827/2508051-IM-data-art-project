@@ -47,7 +47,7 @@
     </div>
 
     <!-- This log is only used on phones -->
-    <img src="../multimedia/Logo.png" alt="The NASA Logo" class="mobileLogo">
+    <img src="../multimedia/Logo.png" alt="The NASA Logo" class="mobileLogo u-logo">
 
     <!-- content -->
     <main>
@@ -57,7 +57,7 @@
         <p>This is where I will be discussing the design and philosophy of this website in depth.</p>
     </section>
     
-    <section class="readingSection">
+    <section class="readingSection startSection">
         <h2>Initial design and goals</h2>
         <p>Unlike my previous site, where I was largely operating blind the whole time, I now have a fair bit more experience making websites. With that in mind, here are some of my main goals for this project:</p>
         <ul>
@@ -98,7 +98,7 @@
         <p>What I can say for sure is that my original idea is scrapped. It simply lacks the level of thought provocation that I want out of this project, and I try not to be someone who's so sacred about their ideas they self sabotage.</p>
     </section>
 
-    <section class="readingSection">
+    <section class="readingSection startSection">
         <h2>Design: Submission 2</h2>
     </section>
 
@@ -161,7 +161,7 @@
         <!-- links are now links -->
     </section>
 
-    <section class="readingSection">
+    <section class="readingSection startSection">
         <h2>Design: Submission 4</h2>
     </section>
 
@@ -175,6 +175,35 @@
         <p>But that's enough of a rant, what about actually designing the data art piece? Well this has already been about at length in blog post 4, but I'll summarize the key points here: Basically, it's a case of vision butting up against reality. I had a grand vision for what I wanted, but as I came to understand my tools better (even if not fully) I realized that what I wanted simply wasn't possible, and had to pivot to something new.</p>
         <p>That being said, I am quite happy with what resulted from the process. I have a fun, interactive data art piece that includes all the features I said it would (against all odds) and is endlessly interesting thanks to the sheer quality of the pictures NASA chooses for its APOD.</p>
         <p>In other words, I do think things have worked out well, and I'm glad that I was able to turn out something solid even if I did have to struggle a lot to get to that point.</p>
+    </section>
+
+    <section class="readingSection startSection">
+        <h2>Design: Final Submission</h2>
+        <p>This will be split into two sections: changes to the site and the final data art piece.</p>
+    </section>
+
+    <section class="readingSection">
+        <h3>Final data art piece.</h3>
+        <img src="../multimedia/Artframe2.jpg" alt="A wireframe of my second art piece">
+        <p>The initial wireframe of what ended up being my final data art piece.</p>
+        <img src="../multimedia/Sortframe.jpg" alt="A scrapped art piece idea">
+        <p>The wireframe of my scrapped idea for the final art piece.</p>
+        <p>Initially, reading that we had to make another data art piece sent me into a flat panic. I mean, I'd already exhausted my creativity and skill making the first, and was stretching into other APIs from NASA to do so. It also took a long, long time to get working properly, with a great deal of sweat, a bit of blood and more tears than I'd like to admit (although that could be just about any part of this site). Still, when the initial shock faded, I was able to pull myself together because I had a job to do. And naturally I was going to do it.</p>
+        <p>What would come to be the final version of art 2 was my initial idea for the project, but as the wireframe shows, it was pretty boring and I didn't know how to make it pop. So I briefly flirted with another idea, one involving an animated sorting algorithm like the immensely satisfying ones you see sometimes on YouTube, but that fell through because I soon realized that I lacked the skill with both sorting algorithms and animation. Not for lack of trying of course, but I've had too many experiences in this course where I've suffered because of over commitment to one idea. So, I decided to ditch the plan and go back to the original, which I already had a prototype for, so I could submit something I didn't like instead of nothing at all.</p>
+        <p>However, my time with the sorting animation was not wasted. I learnt about animation, and also got a clearer idea about what I wanted to do with my art. The other thing that contributed to my direction was the final blog post, which gave me the philosophy for my second piece: "Data art is both the data and the art." With this new philosophy, I set out to make something that both represents data in an interesting way and makes it look pretty.</p>
+        <p>So, how did I make my final piece? The biggest change between this and my previous attempts is that I am once again using another of NASA's API's, this time the Near Earth Object service. On a technical side, I First used D3's contour function to add some base visual flair. Then, I added animations (which look really good in my opinion) to add both interactivity and visual flair to the project. I also furthered the interactivity by creating an additional information tooltip, so that the data won't just exist uncontextualized. Finally, I added a little bit of colour to the whole thing, in the form of the colour banded contour lines, to create the prettiest data art piece I could.</p>
+        <p>Overall, I do think that it is less impressive than my first piece. I mean I could literally play with that thing for hours, so it's hard to top. But I am more proud of this second piece in a way. The first is heavily bastardized off Andre's work, and I barely got it to work. Even then, I hardly understand it. This second piece was far easier to put together, and was done mainly by my hands. Most of all, I know what all the parts do, unlike basically any of my previous D3 projects. In that way, this is the perfect ending to this semester, since it represents a transition from hapless D3 baby to something more like a D3 toddler, which I think is far more than I ever expected of myself.</p>
+        <p>To end off with, I want to reflect a bit on the NASA API. Because while using anything NASA related is hype, I'm not sure it's the right API to be mandated for this course. For one, while it is largely reliable and easy to use, some of the services it offers are more reliable than others, and the SSC API that I practically based my site off had several outages throughout my time using it. Next, I do not feel like the data sets it offers are particularly good for use with D3. They're often too small, focusing on depth over bredth which results in less visually interesting outcomes. A lot of that data also isn't immediately useful, and has resulted in about a third of my time making visuallizations being spent just getting the data usable. Now I know that's more realistic to a proper work environment, but it doesn't change the fact that the data these API's offer just isn't all that useful for visualizations. Of course, this doesn't really matter to me anymore, since I'm done working with this API for the time being, but I guess I just want it to be something that's thought about in future.</p>
+    </section>
+
+    <section class="readingSection">
+        <h3>Changes to the final submission.</h3>
+        <p>To start off with, I want to briefly comment on the fact that I've kind of gotten better at wireframes. I know, we all never thought it would happen. Initially, I used to completely phone them in past a certain point because I would just clearly visualize my idea in my head and transfer it directly to the site. Over time, I've come to realize that while this works for me, that middle step of planning out I want does still help, especially when working with D3. Because while I work on the wireframe, I can start mentally sorting out what functions I plan on using to bring the art to life, which makes the process of actually putting the whole thing together easier. Also, it helps with communicating my ideas, like all design tools, which shows what my intent is behind the choices I make. </p>
+        <p>So my wireframes have naturally improved, because initially there wasn't really all that much intent behind the web design I did. I'd just work off vibes and what I felt looked right, hence the early internet looking sites I made. But as time has passed, I've become more deliberate with my choices on the site. Giving everything a smoothed, sci-fi and professional feel by deliberately choosing font, palette and rounded shapes for my site. As the site has become more deliberate, I've had more to talk about in my wireframes, so it's been a natural evolution.</p>
+        <p>Thanks to my increased understanding of D3, I've been able to implement responsive sizing to the graphs. it's not perfect, but it's better than just leaving them at whatever size. The final art piece, in particular, actually looks better on a smaller screen in my opinion. Mobile functionality has always been part of my goal for this site, because being able to show the site on my phone makes getting feedback easier. It also motivates me more, since I'm no longer just doing this for marks but will instead have something real to show to my friends and family. Any additional motivation always helps, especially because I'm shooting for a higher bar than just mediocrity.</p>
+        <p>I've also continued working on making this site more pleasent to read, which is something I definitely haven't been concious enough about throughout the project. I think it's taken a bit of a backseat to D3 and the more code heavy stuff. Still, waiting till the end to do it has turned out to be perfect, because I've done so much work these past few days my eyes are beginning to really hurt. So I'll do anything to make the site better to read right now. Anyways, improving readability involves a few things. Making fonts more reasonable, changing indentation (this was a big one), improving heirarchy of how elements are laid out and generally just fixing a lot of the little inconsistencies that have built up over multiple iterations of this site. This is after all more or less the 0.5 version, so I'd say that I've built up a few old holdovers from previous site versions by now. So, fixing those, and making this site better to read.</p>
+        <p>I also tried my best to implement feedback about my first art piece, adding a description and shifting things to be a bit better spaced on a page. Also weirdly I never implemented a function to make the selected node on the fourth graph grow in size, so I'm doing that here and now.</p>
+        <p>The one thing that isn't being changed is my rare usage of spans/divs. Look, I know we're supposed to avoid them, but I believe I'm using them in their correct places. They're being used where I need non semantic, non-existant little nebulous blobs. If there was another way of doing it, I would have done it. Probably, unless the method is too obscure. That said, I do enjoy hunting down misused divs in my code. Finding the correct semantic elements for everything I can has made me appreciate how diverse HTML is, and diving through MDN has given me more than a few ideas for new features that I can put on my site. It's just those specific use cases need Divs, is all.</p>
     </section>
 
     <section class="references">

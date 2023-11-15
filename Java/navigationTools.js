@@ -9,17 +9,21 @@ var pages = [{
 },{
     ID: 3,
     location: "art.html",
-    text: "Art"
+    text: "Art Piece 1"
 },{
     ID: 4,
+    location: "art2.html",
+    text: "Art Piece 2"
+},{
+    ID: 5,
     location: "design.html",
     text: "Design"
 },{
-    ID: 5,
+    ID: 6,
     location: "blog.html",
     text: "Blog"
 },{
-    ID: 6,
+    ID: 7,
     location: "../multimedia/Logo.png",
     text: "Logo"
 }]
@@ -35,17 +39,21 @@ var pagesInd = [{
 },{
     ID: 3,
     location: "HTML/art.html",
-    text: "Art"
+    text: "Art Piece 1"
 },{
     ID: 4,
+    location: "HTML/art2.html",
+    text: "Art Piece 2"
+},{
+    ID: 5,
     location: "HTML/design.html",
     text: "Design"
 },{
-    ID: 5,
+    ID: 6,
     location: "HTML/blog.html",
     text: "Blog"
 },{
-    ID: 6,
+    ID: 7,
     location: "multimedia/Logo.png",
     text: "Logo"
 }]
@@ -81,7 +89,7 @@ function displayTopBar(pageses){
     var logoLink = document.createElement('a');
     logoLink.href = `${pageses[0].location}`;
     var img = document.createElement('img');
-    img.src = `${pageses[5].location}`;
+    img.src = `${pageses[6].location}`;
     img.alt = "Logo";
 
     var ul = document.createElement('ul');

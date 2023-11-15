@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Piece 2</title>
+
+    <meta name="description" content="Art page 2 of IM art website.">
+    <meta name="keywords" content="Space, NASA, Satellites, Project">
+    <meta name="author" content="Bruce Tonkin">
+
+    <link rel="stylesheet" href="../CSS/style.css">
+    <link rel="stylesheet" href="../CSS/uniqueStyles.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-scale-chromatic@3.0.0/dist/d3-scale-chromatic.min.js"></script>
+
+    <link rel="shortcut icon" href="../multimedia/Logo.png">
+
+
+</head>
+<body>
+    <!-- Header things -->
+    <header>
+        <nav class="wrapper">
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <label class="HamMenu">
+        <input type="checkbox">
+    </label>
+
+    <aside class="sideBar" id="sideChick">
+    </aside>
+
+    <!-- Star background -->
+
+    <span class="backGround">
+        <img src="../multimedia/star-galaxy.gif" alt="A glittering sky of stars">
+    </span> 
+
+    <!-- This log is only used on phones -->
+    <img src="../multimedia/Logo.png" alt="The NASA Logo" class="mobileLogo">
+
+    <main>
+        <h1 class="art2Title">Data art is both the data and the art.</h1>
+        
+        <section class="artSection2" id="domain">
+
+        </section>
+
+        <section class="art2Buttons">
+            <button id="#closeButton" onclick="changeParam('closeCalls')">Close calls</button>
+            <button id="#magnitudeButton" onclick="changeParam('mag')">Magnitude</button>
+        </section>
+
+                
+        <section class="art2Info">
+            <h2 id="name">Name: </h2>
+            <p id="id">ID: </p>
+        </section>
+    
+    </main>
+
+    <a href="#" class="toTop">
+        <nav>↑</nav>
+    </a>
+
+    <footer class="foote">
+        <img src="../multimedia/Helmet.png" alt="An astronaut's helmet">
+        <p>This site couldn't exist without the hard work of the scientists at NASA. Go check out their site for much more amazing space information at this link here:</p>
+        <a href="https://www.nasa.gov/">Space is so COOL!!!</a>
+    </footer>
+
+
+    <script src="../Java/navigationTools.js"></script>
+    <script src="../Java/artPiece2.js"></script>
+    
+</body>
+</html>
