@@ -517,8 +517,18 @@ function graph4() {
             return "black";
         }})
     .on('mouseover', (event, datum) => showtooltip(datum))
-    .on('mousemove', movetooltip)
-    .on("mouseout", hidetooltip);
+    .on('mousemove', function (d, i) {
+        d3.select(this).transition()
+             .duration('100')
+             .attr("r", 7);
+   })
+   .on('mouseout', function (d, i) {
+        d3.select(this).transition()
+             .duration('200')
+             .attr("r", 3);
+
+        hidetooltip;
+   });
 
 
     svg4.append("text")
@@ -578,5 +588,6 @@ function graph4() {
 
     function hidetooltip() {
     tooltip.style("opacity", 0);
+
 }
 }
