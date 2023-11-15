@@ -2,6 +2,10 @@ var Transtime = 500;
 
 var usefulFile = [];
 
+var colCount = 0;
+
+var colors = ["green", "coral", "blueviolet", "darkslategray"]
+
 //Get buttons
 var closeBut, magBut;
 
@@ -97,18 +101,18 @@ async function createArt() {
     // Append the contours.
     svg.append("g")
         .attr("fill", "none")
-        .attr("stroke", "steelblue")
         .attr("stroke-linejoin", "round")
         .selectAll()
         .data(contours)
         .join("path")
         .attr("stroke-width", (d, i) => i % 5 ? 0.25 : 1)
         .attr("d", d3.geoPath())
-        .attr("id", "conts");
+        .attr("id", "conts")
+        .style("stroke", generateColor());
 
     // Append dots.
     svg.append("g")
-        .attr("stroke", "white")
+        .attr("stroke", "black")
         .selectAll()
         .data(asteroidData)
         .join("circle")
@@ -119,7 +123,7 @@ async function createArt() {
             if (d.is_potentially_hazardous_asteroid) {
                 return "red";
             } else{
-                return "black";
+                return "blue";
             }})
         .on('mouseover', (event, datum) => showInfo(datum))
         // .on("mouseout", hideInfo());
@@ -127,10 +131,11 @@ async function createArt() {
         function showInfo(d) {
             document.getElementById("name").textContent = "Name: " + d.name;
             document.getElementById("id").textContent = "ID: " + d.id;
-            document.getElementById("date").textContent = "First Observed: " + d.orbital_data.first_observation_date;
+            document.getElementById("date").textContent = d.orbital_data.first_observation_date;
             document.getElementById("date").datetime = d.orbital_data.first_observation_date;
-            document.getElementById("magnitude").textContent = "Absolute Magnitude: " + d.id;
+            document.getElementById("magnitude").textContent = "Absolute Magnitude: " + d.absolute_magnitude_h;
             document.getElementById("radius").textContent = "Radius (KM, estimated): " + ((d.estimated_diameter.kilometers.estimated_diameter_max + d.estimated_diameter.kilometers.estimated_diameter_min) / 2);
+            document.getElementById("calls").textContent = "Close Calls: " + d.closeCalls;
         }
 
         // function hideInfo() {
@@ -188,7 +193,8 @@ function changeParam(selection) {
         .delay(function(d,i){return(i*3)})
         .duration(Transtime)
         .attr("stroke-width", (d, i) => i % 5 ? 0.25 : 1)
-        .attr("d", d3.geoPath());
+        .attr("d", d3.geoPath())
+        .style("stroke", generateColor());;
         
         svg.selectAll("circle")
         .data(usefulFile)
@@ -224,7 +230,8 @@ function changeParam(selection) {
         .delay(function(d,i){return(i*3)})
         .duration(Transtime)
         .attr("stroke-width", (d, i) => i % 5 ? 0.25 : 1)
-        .attr("d", d3.geoPath());
+        .attr("d", d3.geoPath())
+        .style("stroke", generateColor());;
         
         svg.selectAll("circle")
         .data(usefulFile)
@@ -237,6 +244,12 @@ function changeParam(selection) {
     }
     
 
+}
+
+function generateColor() {
+    var randVal = Math.floor(Math.random() * 4)
+
+    return colors[randVal];
 }
 
 createArt();
