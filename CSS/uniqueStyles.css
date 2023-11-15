@@ -485,10 +485,19 @@ figcaption {
         padding: 1rem 0.6rem;
     }
 
+    .readingSection li{
+        padding: 1rem 0.8rem;
+    }
+
 
     .readingSection figure{
         align-self: center;
         width: 98%
+    }
+
+    .readingSection img{
+        width: auto;
+        max-width: 60vw;
     }
 
     .blogPost h2{
