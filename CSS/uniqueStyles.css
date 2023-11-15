@@ -206,11 +206,17 @@ figcaption {
 .art2Info h2{
     color: black;
     padding-left: 2rem;
+    font-size: 3rem;
 }
 
 .art2Info p{
     color: black;
     padding-left: 3rem;
+    font-size: 1.8rem;
+}
+
+.art2Info time{
+    color: black;
 }
 
 .art2Title{
