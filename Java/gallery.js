@@ -79,6 +79,16 @@ var designIMG = [{
     img: "../multimedia/Essay4images/Artframe.jpg",
     desc: "A wireframe that I used to plan my final iteration of the art piece.",
     alt: "A wireframe of the final art piece",
+},{
+    id: 17,
+    img: "../multimedia/Sortframe.jpg",
+    desc: "A wireframe of a discarded sorting visualization plan.",
+    alt: "A wireframe of a sorting visualizer",
+},{
+    id: 18,
+    img: "../multimedia/Artframe2.jpg",
+    desc: "The first wireframe of the final art piece. It ended up a little different.",
+    alt: "A wireframe of the final final art piece.",
 },]
 
 
